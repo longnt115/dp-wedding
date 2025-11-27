@@ -27,7 +27,7 @@ export default function Banner() {
                 data-animate-effect="fadeIn"
               >
                 <h1>Hải Đăng &amp; Bích Phượng</h1>
-                <h2>24 tháng 12 năm 2025</h2>
+                <h2>27 Tháng 12 Năm 2025</h2>
                 {/* <div className="simply-countdown simply-countdown-one"></div> */}
                 <p>
                   <a href="#" className="btn btn-default btn-sm">

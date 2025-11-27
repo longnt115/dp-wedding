@@ -49,50 +49,8 @@ body {
 }
 
 /* Utility classes for wedding theme */
-.text-wedding-primary {
-  @apply text-[#3a3a3a];
-}
-
-.text-wedding-secondary {
-  @apply text-[#666666];
-}
-
-.bg-wedding-light {
-  @apply bg-[#f5f5f5];
-}
-
-.bg-wedding-dark {
-  @apply bg-wedding-dark;
-}
-
 .text-wedding-bride-red {
   @apply text-[#a10129];
-}
-
-.text-wedding-gold-light {
-  @apply text-[#c9a961];
-}
-
-.border-wedding {
-  @apply border-[#e0e0e0];
-}
-
-.pinyon-script-thin {
-  font-family: "Pinyon Script";
-  font-style: italic;
-  font-weight: 100;
-  font-stretch: 100%;
-  font-display: swap;
-}
-
-.pinyon-script-regular {
-  font-family: "Pinyon Script";
-  font-style: italic;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
-    U+FE2E-FE2F;
 }
 
 .alex-brush-regular {
@@ -111,27 +69,9 @@ body {
   font-style: normal;
 }
 
-.barlow-extralight {
-  font-family: "Barlow", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.barlow-light {
-  font-family: "Barlow", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
 .barlow-regular {
   font-family: "Barlow", sans-serif;
   font-weight: 400;
-  font-style: normal;
-}
-
-.barlow-medium {
-  font-family: "Barlow", sans-serif;
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -140,25 +80,6 @@ body {
   font-weight: 600;
   font-style: normal;
 }
-
-.barlow-bold {
-  font-family: "Barlow", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.barlow-extrabold {
-  font-family: "Barlow", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.barlow-black {
-  font-family: "Barlow", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
 .dancing-script-thin {
   font-family: "Dancing Script", Arial, serif;
   font-optical-sizing: auto;
@@ -346,7 +267,7 @@ body {
   font-style: normal;
 } 
 
-.dancing-semibiold {
+.dancing-semibold {
   font-family: "Dancing Script", Arial, serif;
   font-optical-sizing: auto;
   font-weight: 600;

@@ -128,7 +128,7 @@ export const WeddingInfor = () => {
                     <div className="text-wedding-gray900 mb-2">
                       <p className="text-base sm:text-lg md:text-xl barlow-regular flex flex-col">
                         <span className="font-semibold">
-                          24h00 <span className="px-1"> | </span> Thứ bảy
+                          11h00 <span className="px-1"> | </span> Thứ bảy
                         </span>
                       </p>
                     </div>
@@ -136,14 +136,14 @@ export const WeddingInfor = () => {
                       id="wedding-date"
                       className="text-white my-5 sm:my-4 pt-6 pb-4 md:py-8 grid grid-cols-[auto_auto_auto] justify-center items-center gap-0 relative"
                     >
-                      <div className="flex md:mr-14">
-                        <span className="py-[0.5rem] px-[-1rem] text-lg md:text-xl lg:text-3xl dancing-semibold text-right">
-                          Tháng 12
-                        </span>
-                        <span className="py-[0.5rem] px-[2.25rem] text-3xl md:text-4xl lg:text-5xl dancing-regular border-gray-800">
+                      <div className="flex md:ml-8 ml-6 items-center">
+                        <span className="py-[0.5rem] pr-[2rem] text-lg md:text-xl lg:text-3xl dancing-semibold text-right">
                           27
                         </span>
-                        <span className="py-[0.5rem] ml-[1rem] text-lg md:text-xl lg:text-3xl dancing-semibold text-left">
+                        <span className="py-[0.5rem] px-[3rem] md:px-[2.25rem] text-lg md:text-2xl lg:text-4xl dancing-semibold  border-solid border-x-1 sm:border-x-3 border-white">
+                          12
+                        </span>
+                        <span className="py-[0.5rem] pl-[2rem] text-lg md:text-xl lg:text-3xl dancing-semibold text-left">
                           2025
                         </span>
                       </div>

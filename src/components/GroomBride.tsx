@@ -5,7 +5,7 @@ export const GroomBride = () => {
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center  fh5co-heading animate-box">
             <h2 className="text-wedding-bride-red">Hello!</h2>
-            <h3>November 28th, 2016 New York, USA</h3>
+            <h3>11h00 Ngày 27 Tháng 12 Năm 2025</h3>
             <p>We invited you to celebrate our wedding</p>
           </div>
         </div>
