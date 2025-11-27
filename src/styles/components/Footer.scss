@@ -1,0 +1,37 @@
+.wd-footer-content {
+    &::before, &::after {
+        content: "";
+        width: 100px;
+        height: 87px;
+        position: absolute;
+        z-index: 2;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url("/assets/images/wreath-small.svg");
+        background-size: contain;
+        -khtml-opacity: 0.5;
+        -moz-opacity: 0.5;
+        opacity: .5;
+    }
+    
+    &::before {
+        -webkit-transform: rotate(50deg);
+        -moz-transform: rotate(50deg);
+        -ms-transform: rotate(50deg);
+        -o-transform: rotate(50deg);
+        transform: rotate(50deg);
+        bottom: -20px;
+        right: -12px;
+    }
+
+    &::after {
+        top: -12px;
+        right: auto;
+        left: -12px;
+        -webkit-transform: rotate(-130deg);
+        -moz-transform: rotate(-130deg);
+        -ms-transform: rotate(-130deg);
+        -o-transform: rotate(-130deg);
+        transform: rotate(-130deg);
+    }
+}

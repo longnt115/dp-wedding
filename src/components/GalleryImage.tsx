@@ -1,85 +1,179 @@
 import "@/styles/components/OurStory.scss";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { EffectCoverflow, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 export const GalleryImage = () => {
   return (
-    <>
-      <motion.div
-        className="text-center"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <h2
-          id="story-heading"
-          className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 text-wedding-gray900 barlow-semibold"
-        >
-          Album ảnh cưới
-        </h2>
-        <div
-          className="w-12 sm:w-16 h-1 bg-gradient-to-r from-wedding-gold to-wedding-gold-light mx-auto mb-3 sm:mb-4"
-          aria-hidden="true"
-        />
-        <p className="text-base sm:text-lg text-wedding-gray600 max-w-2xl mx-auto px-4 barlow-regular">
-          A journey of love, laughter, and beautiful moments that led us here
-        </p>
-      </motion.div>
+    <div id="fh5co-gallery" className="fh5co-section-gray">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+            <span>Our Memories</span>
+            <h2 className="text-wedding-bride-red">Wedding Gallery</h2>
+            <p>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts.
+            </p>
+          </div>
+        </div>
+        <div className="row row-bottom-padded-md flex justify-center">
+          <div className="col-md-11">
+            <div
+              id="fh5co-gallery-list"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 auto-rows-[80px] sm:auto-rows-[90px] lg:auto-rows-[110px]"
+            >
+              {/* Cột 1 - Ảnh 1: Ảnh ngang */}
+              <div
+                className="relative overflow-hidden rounded-lg group animate-box row-span-4"
+                data-animate-effect="fadeIn"
+              >
+                <Image
+                  src="/assets/images/TVL_4882.JPG"
+                  alt="Gallery 1"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  fill
+                />
+                <a
+                  href="assets/images/TVL_4882.JPG"
+                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white"></div>
+                </a>
+              </div>
 
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: -50,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        initialSlide={1}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-        }}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper my-8 sm:my-12 md:my-16"
-      >
-        <SwiperSlide>
-          <Image
-            alt="Couple's first meeting"
-            width={240}
-            height={350}
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-            className="rounded-2xl shadow-lg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt="Couple's first meeting"
-            width={240}
-            height={350}
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
-            className="rounded-2xl shadow-lg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt="Couple's first meeting"
-            width={240}
-            height={350}
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
-            className="rounded-2xl shadow-lg"
-          />
-        </SwiperSlide>
-      </Swiper>
-    </>
+              {/* Cột 2 - Ảnh 2: Ảnh dọc lớn (chiếm 2 hàng) */}
+              <div
+                className="relative overflow-hidden rounded-lg row-span-5 group animate-box"
+                data-animate-effect="fadeIn"
+              >
+                <Image
+                  src="/assets/images/TVL_4853.JPG"
+                  alt="Gallery 2"
+                  fill
+                  className="w-full h-full transition-transform duration-500 group-hover:scale-110"
+                />
+                <a
+                  href="assets/images/TVL_4853.JPG"
+                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white"></div>
+                </a>
+              </div>
+
+              {/* Cột 3 - Ảnh 3: Ảnh ngang */}
+              <div
+                className="relative overflow-hidden rounded-lg row-span-4 group animate-box"
+                data-animate-effect="fadeIn"
+              >
+                <Image
+                  src="/assets/images/TVL_4905.JPG"
+                  alt="Gallery 3"
+                  fill
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <a
+                  href="images/TVL_4905.JPG"
+                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white"></div>
+                </a>
+              </div>
+
+              {/* Cột 1 - Ảnh 4: Ảnh ngang */}
+              <div
+                className="relative overflow-hidden rounded-lg row-span-4 group animate-box"
+                data-animate-effect="fadeIn"
+              >
+                <img
+                  src="assets/images/gallery-4.jpg"
+                  alt="Gallery 4"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <a
+                  href="images/gallery-4.jpg"
+                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white"></div>
+                </a>
+              </div>
+
+              {/* Cột 2 - Ảnh 5: Ảnh ngang (ở dưới ảnh dọc) */}
+              <div
+                className="relative overflow-hidden rounded-lg row-span-4 group animate-box"
+                data-animate-effect="fadeIn"
+              >
+                <img
+                  src="assets/images/gallery-5.jpg"
+                  alt="Gallery 5"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <a
+                  href="images/gallery-5.jpg"
+                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white"></div>
+                </a>
+              </div>
+
+              {/* Cột 3 - Ảnh 6: Ảnh ngang */}
+              <div
+                className="relative overflow-hidden rounded-lg row-span-5 group animate-box"
+                data-animate-effect="fadeIn"
+              >
+                <img
+                  src="assets/images/gallery-6.jpg"
+                  alt="Gallery 6"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <a
+                  href="images/gallery-6.jpg"
+                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white"></div>
+                </a>
+              </div>
+
+              {/* Cột 1 - Ảnh 7: Ảnh dọc lớn (chiếm 2 hàng) */}
+              <div
+                className="relative overflow-hidden rounded-lg row-span-3 group animate-box"
+                data-animate-effect="fadeIn"
+              >
+                <img
+                  src="assets/images/gallery-7.jpg"
+                  alt="Gallery 7"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <a
+                  href="images/gallery-7.jpg"
+                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white"></div>
+                </a>
+              </div>
+
+              {/* Cột 2 - Ảnh 8: Ảnh ngang */}
+              <div
+                className="relative overflow-hidden rounded-lg row-span-3 group animate-box"
+                data-animate-effect="fadeIn"
+              >
+                <img
+                  src="assets/images/gallery-8.jpg"
+                  alt="Gallery 8"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <a
+                  href="images/gallery-8.jpg"
+                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
