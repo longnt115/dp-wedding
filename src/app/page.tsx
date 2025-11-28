@@ -1,23 +1,32 @@
 "use client";
 
 import Banner from "@/components/Banner";
-import { Footer } from "@/components/Footer";
-import { GalleryImage } from "@/components/GalleryImage";
 import { GroomBride } from "@/components/GroomBride";
 import { WeddingInfor } from "@/components/WeddingInfor";
-import { Suspense } from "react";
+import { lazy, Suspense } from "react";
 
 export default function Home() {
+  const GalleryImage = lazy(() =>
+    import("@/components/GalleryImage").then((module) => ({
+      default: module.GalleryImage,
+    }))
+  );
+
+  const Footer = lazy(() =>
+    import("@/components/Footer").then((module) => ({
+      default: module.Footer,
+    }))
+  );
+
   return (
     <main className="min-h-screen">
       <Suspense fallback={<div>Loading...</div>}>
         <Banner />
+        <GroomBride />
+        <WeddingInfor />
+        <GalleryImage />
+        <Footer />
       </Suspense>
-      <GroomBride />
-      <WeddingInfor />
-      {/* <Countdown /> */}
-      <GalleryImage />
-      <Footer />
     </main>
   );
 }

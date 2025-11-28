@@ -10,8 +10,7 @@
 @import "@/styles/animate.scss";
 @import "@/styles/icomoon.scss";
 
-// Bootstrap and Theme styles
-@import "@/styles/sass/bootstrap.scss";
+// Theme styles (Bootstrap removed - using Tailwind only)
 @import "@/styles/sass/style.scss";
 :root {
   /* Wedding Theme Colors */

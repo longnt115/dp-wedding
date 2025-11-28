@@ -64,11 +64,11 @@ export default function Countdown() {
 
   const CountdownCard = ({
     value,
-    label,
     className = "",
+    label = "",
   }: {
     value: number;
-    label: string;
+    label?: string;
     className?: string;
   }) => (
     <div
@@ -79,56 +79,33 @@ export default function Countdown() {
       <div className="relative">
         <div className="w-14 sm:w-16 md:w-20 lg:w-24 flex items-center justify-center">
           <span
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl barlow-semibold text-white"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl dancing-semibold text-white"
             aria-live="polite"
           >
             {String(value).padStart(2, "0")}
           </span>
         </div>
       </div>
-      <p className="mt-2 sm:mt-3 text-white text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl alex-brush-regular">
-        {label}
-      </p>
+      {label && (
+        <p className="mt-2 sm:mt-3 text-white text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl dancing-regular">
+          {label}
+        </p>
+      )}
     </div>
   );
 
   return (
-    <section
-      aria-labelledby="countdown-heading"
-      className="px-4 sm:px-6 py-10 sm:py-12 md:py-16 bg-gradient-to-r from-wedding-light to-wedding-gray100"
+    <motion.div
+      className="flex flex-row justify-center items-center gap-2 lg:gap-4 xl:gap-5 2xl:gap-7"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
     >
-      <div className="rounded-2xl sm:rounded-3xl mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl bg-gray-800">
-        <motion.div
-          className="text-center mb-6 sm:mb-8 md:mb-12"
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2
-            id="countdown-heading"
-            className="text-3xl sm:text-4xl md:text-5xl text-white mb-2 pt-4 sm:pt-5 md:pt-6 barlow-regular"
-          >
-            Counting Days
-          </h2>
-          <h4 className="text-sm sm:text-base px-4 barlow-thin text-wedding-light">
-            We can&apos;t wait to celebrate with you!
-          </h4>
-        </motion.div>
-
-        <motion.div
-          className="flex flex-row justify-center items-center pb-4 sm:pb-5 md:pb-6 gap-2 sm:gap-4 md:gap-6 lg:gap-10"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <CountdownCard value={timeLeft.days} label="Days" />
-          <CountdownCard value={timeLeft.hours} label="Hours" />
-          <CountdownCard value={timeLeft.minutes} label="Minutes" />
-          <CountdownCard value={timeLeft.seconds} label="Seconds" />
-        </motion.div>
-      </div>
-    </section>
+      <CountdownCard value={timeLeft.days} label="Ngày" />
+      <CountdownCard value={timeLeft.hours} label="Giờ" />
+      <CountdownCard value={timeLeft.minutes} label="Phút" />
+      <CountdownCard value={timeLeft.seconds} label="Giây" />
+    </motion.div>
   );
 }

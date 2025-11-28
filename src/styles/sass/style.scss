@@ -2,7 +2,7 @@ $font-primary: 'Work Sans', Arial, sans-serif;
 $font-secondary: 'Dancing Script', Arial, serif;
 
 
-// Overrides
+// Variables (previously from Bootstrap - now standalone)
 $grid-gutter-width: 40px !default; 
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
@@ -19,6 +19,16 @@ $brand-body-color: #818892;
 $brand-selection-color: #f9f6f0;
 $brand-overlay-color: #3b3d40;
 $brand-bg-color: $brand-white;
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+// Screen breakpoints (replacing Bootstrap variables)
+$screen-xs:                  480px !default;
+$screen-sm:                  768px !default;
+$screen-md:                  992px !default;
+$screen-lg:                  1200px !default;
 
 $input-border-focus:  $brand-primary !default;
 $form-group-margin-bottom:       30px !default;
@@ -92,13 +102,6 @@ $form-group-margin-bottom:       30px !default;
 	-moz-osx-font-smoothing: grayscale;
 	
 }
-
-// Import 
-@import 'bootstrap/mixins';
-@import 'bootstrap/variables';
-
-
-
 
 /* =======================================================
 *
