@@ -18,12 +18,19 @@ export default function Home() {
     }))
   );
 
+  const EventPlace = lazy(() =>
+    import("@/components/EventPlace").then((module) => ({
+      default: module.EventPlace,
+    }))
+  );
+
   return (
     <main className="min-h-screen">
       <Suspense fallback={<div>Loading...</div>}>
         <Banner />
         <GroomBride />
         <WeddingInfor />
+        <EventPlace />
         <GalleryImage />
         <Footer />
       </Suspense>

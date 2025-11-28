@@ -4,14 +4,14 @@ export const GroomBride = () => {
   return (
     <div id="fh5co-couple">
       <div className="container">
-        <div className="row">
-          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+        <div className="row justify-center">
+          <div className="col-md-8 text-center fh5co-heading">
             <h2 className="text-wedding-bride-red">Hello!</h2>
             <h3>11h00 Ngày 27 Tháng 12 Năm 2025</h3>
             <p>We invited you to celebrate our wedding</p>
           </div>
         </div>
-        <div className="couple-wrap animate-box">
+        <div className="couple-wrap">
           <div className="couple-half">
             <div className="groom">
               <Image

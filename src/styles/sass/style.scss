@@ -1018,20 +1018,27 @@ form {
 }
 
 
-// COUPLE
+// COUPLE - Modern CSS with Flexbox
 .couple-wrap{
 	width: 90%;
 	margin: 0 auto;
 	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	
 	@media screen and (max-width: $screen-sm){
 		width: 100%;
+		flex-direction: column;
 	}
 }
+
 .heart{
 	position: absolute;
 	top: 4em;
-	left: 0;
-	right: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	z-index: 99;
 	animation: pulse 1s ease infinite;
 	i{
@@ -1045,68 +1052,103 @@ form {
 		display: none;
 	}
 }
+
 .couple-half{
 	width: 50%;
-	float: left;
+	display: flex;
+	flex-direction: column;
+	
 	@media screen and (max-width: $screen-sm){
 		width: 100%;
+		align-items: center;
 	}
+	
 	h3{
 		font-family: $font-secondary;
 		color: $brand-primary;
 		font-size: 30px;
 	}
-	.groom,.bride{
-		float: left;
+	
+	.groom, .bride{
 		@include border-radius(50%);
-		// overflow: hidden;
-		// margin-left: 5px;
 		width: 150px;
 		height: 150px;
+		flex-shrink: 0;
+		
 		img{
 			width: 150px;
 			height: 150px;
 			@include border-radius(50%);
+			object-fit: cover;
 		}
+		
 		@media screen and (max-width: $screen-xs){
-			width: 100%;
-			height: 140px;
+			width: 120px;
+			height: 120px;
 			img{
 				width: 120px;
 				height: 120px;
-				margin: 0 auto;
-
 			}
 		}
 	}
-	.groom{
-		float: right;
-		margin-right: 5px;
-	}
-	.bride{
-		float: left;
-		margin-left: 5px;
-	}
-	.desc-groom{
-		padding-right: 180px;
+	
+	// Groom section - align right
+	&:first-of-type {
+		align-items: flex-end;
 		text-align: right;
+		
+		.groom {
+			margin-left: auto;
+			margin-right: 5px;
+		}
+		
+		.desc-groom {
+			padding-right: 160px;
+			
+			@media screen and (max-width: $screen-xs){
+				padding-right: 0;
+				text-align: center;
+			}
+		}
+		
+		@media screen and (max-width: $screen-sm){
+			align-items: center;
+			text-align: center;
+			
+			.groom {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
 	}
-	.desc-bride{
-		padding-left: 180px;
+	
+	// Bride section - align left
+	&:last-of-type {
+		align-items: flex-start;
 		text-align: left;
-	}
-	@media screen and (max-width: $screen-xs){
-		.groom,.bride{
-			margin-left: 0;
-			margin-right: 0;
+		
+		.bride {
+			margin-right: auto;
+			margin-left: 5px;
 		}
-		.desc-groom{
-			padding-right: 0;
-			text-align: center;
+		
+		.desc-bride {
+			padding-left: 160px;
+			
+			@media screen and (max-width: $screen-xs){
+				padding-left: 0;
+				text-align: center;
+			}
 		}
-		.desc-bride{
-			padding-left: 0;
+		
+		@media screen and (max-width: $screen-sm){
+			align-items: center;
 			text-align: center;
+			
+			.bride {
+				margin-right: 0;
+				margin-left: 0;
+			}
 		}
 	}
 }
