@@ -19,18 +19,18 @@ export const WeddingInfor = () => {
       }}
     >
       <div className="overlay"></div>
-      <div className="max-w-[1170px] mx-auto px-[15px] relative z-1">
-        <div className="flex flex-wrap -mx-[15px]">
-          <div className="w-full md:w-8/12 md:ml-[16.666667%] px-[15px] text-center fh5co-heading animate-box mb-0">
+      <div className="container relative z-1">
+        <div className="row">
+          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box mb-0">
             <h2>Lễ Thành Hôn</h2>
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap -mx-[15px] relative z-1">
+      <div className="row relative z-1">
         <div className="display-t">
           <div className="display-tc">
-            <div className="w-full md:w-6/12 px-[15px] flex justify-center">
-              <div className="md:ml-[8.333333%] w-full md:w-8/12 sm:w-8/12 px-[15px] text-center text-white">
+            <div className="col-md-6 flex justify-center">
+              <div className="col-md-offset-1 col-md-8 col-sm-8 text-center text-white">
                 <div className="event-wrap animate-box">
                   <h3> Hải Đăng & Bích Phượng</h3>
                   <motion.div

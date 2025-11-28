@@ -12,6 +12,306 @@
 
 // Theme styles (Bootstrap removed - using Tailwind only)
 @import "@/styles/sass/style.scss";
+
+/* ============================================
+   Bootstrap-like Grid System using Tailwind 4
+   ============================================ */
+
+/* Container */
+.container {
+  @apply w-full mx-auto px-[15px];
+  
+  @media (min-width: 768px) {
+    max-width: 750px;
+  }
+  @media (min-width: 992px) {
+    max-width: 970px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1170px;
+  }
+}
+
+.container-fluid {
+  @apply w-full mx-auto px-[15px];
+}
+
+/* Row */
+.row {
+  @apply flex flex-wrap -mx-[15px];
+}
+
+/* Column base styles */
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6,
+.col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12,
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
+.col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+.col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
+.col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+  @apply relative px-[15px] w-full;
+}
+
+/* Extra small devices (phones, less than 768px) - xs */
+.col-xs-1 { width: 8.333333%; }
+.col-xs-2 { width: 16.666667%; }
+.col-xs-3 { width: 25%; }
+.col-xs-4 { width: 33.333333%; }
+.col-xs-5 { width: 41.666667%; }
+.col-xs-6 { width: 50%; }
+.col-xs-7 { width: 58.333333%; }
+.col-xs-8 { width: 66.666667%; }
+.col-xs-9 { width: 75%; }
+.col-xs-10 { width: 83.333333%; }
+.col-xs-11 { width: 91.666667%; }
+.col-xs-12 { width: 100%; }
+
+/* Offsets - xs */
+.col-xs-offset-1 { margin-left: 8.333333%; }
+.col-xs-offset-2 { margin-left: 16.666667%; }
+.col-xs-offset-3 { margin-left: 25%; }
+.col-xs-offset-4 { margin-left: 33.333333%; }
+.col-xs-offset-5 { margin-left: 41.666667%; }
+.col-xs-offset-6 { margin-left: 50%; }
+.col-xs-offset-7 { margin-left: 58.333333%; }
+.col-xs-offset-8 { margin-left: 66.666667%; }
+.col-xs-offset-9 { margin-left: 75%; }
+.col-xs-offset-10 { margin-left: 83.333333%; }
+.col-xs-offset-11 { margin-left: 91.666667%; }
+
+/* Small devices (tablets, 768px and up) - sm */
+@media (min-width: 768px) {
+  .col-sm-1 { width: 8.333333%; }
+  .col-sm-2 { width: 16.666667%; }
+  .col-sm-3 { width: 25%; }
+  .col-sm-4 { width: 33.333333%; }
+  .col-sm-5 { width: 41.666667%; }
+  .col-sm-6 { width: 50%; }
+  .col-sm-7 { width: 58.333333%; }
+  .col-sm-8 { width: 66.666667%; }
+  .col-sm-9 { width: 75%; }
+  .col-sm-10 { width: 83.333333%; }
+  .col-sm-11 { width: 91.666667%; }
+  .col-sm-12 { width: 100%; }
+  
+  /* Offsets - sm */
+  .col-sm-offset-0 { margin-left: 0; }
+  .col-sm-offset-1 { margin-left: 8.333333%; }
+  .col-sm-offset-2 { margin-left: 16.666667%; }
+  .col-sm-offset-3 { margin-left: 25%; }
+  .col-sm-offset-4 { margin-left: 33.333333%; }
+  .col-sm-offset-5 { margin-left: 41.666667%; }
+  .col-sm-offset-6 { margin-left: 50%; }
+  .col-sm-offset-7 { margin-left: 58.333333%; }
+  .col-sm-offset-8 { margin-left: 66.666667%; }
+  .col-sm-offset-9 { margin-left: 75%; }
+  .col-sm-offset-10 { margin-left: 83.333333%; }
+  .col-sm-offset-11 { margin-left: 91.666667%; }
+}
+
+/* Medium devices (desktops, 992px and up) - md */
+@media (min-width: 992px) {
+  .col-md-1 { width: 8.333333%; }
+  .col-md-2 { width: 16.666667%; }
+  .col-md-3 { width: 25%; }
+  .col-md-4 { width: 33.333333%; }
+  .col-md-5 { width: 41.666667%; }
+  .col-md-6 { width: 50%; }
+  .col-md-7 { width: 58.333333%; }
+  .col-md-8 { width: 66.666667%; }
+  .col-md-9 { width: 75%; }
+  .col-md-10 { width: 83.333333%; }
+  .col-md-11 { width: 91.666667%; }
+  .col-md-12 { width: 100%; }
+  
+  /* Offsets - md */
+  .col-md-offset-0 { margin-left: 0; }
+  .col-md-offset-1 { margin-left: 8.333333%; }
+  .col-md-offset-2 { margin-left: 16.666667%; }
+  .col-md-offset-3 { margin-left: 25%; }
+  .col-md-offset-4 { margin-left: 33.333333%; }
+  .col-md-offset-5 { margin-left: 41.666667%; }
+  .col-md-offset-6 { margin-left: 50%; }
+  .col-md-offset-7 { margin-left: 58.333333%; }
+  .col-md-offset-8 { margin-left: 66.666667%; }
+  .col-md-offset-9 { margin-left: 75%; }
+  .col-md-offset-10 { margin-left: 83.333333%; }
+  .col-md-offset-11 { margin-left: 91.666667%; }
+}
+
+/* Large devices (large desktops, 1200px and up) - lg */
+@media (min-width: 1200px) {
+  .col-lg-1 { width: 8.333333%; }
+  .col-lg-2 { width: 16.666667%; }
+  .col-lg-3 { width: 25%; }
+  .col-lg-4 { width: 33.333333%; }
+  .col-lg-5 { width: 41.666667%; }
+  .col-lg-6 { width: 50%; }
+  .col-lg-7 { width: 58.333333%; }
+  .col-lg-8 { width: 66.666667%; }
+  .col-lg-9 { width: 75%; }
+  .col-lg-10 { width: 83.333333%; }
+  .col-lg-11 { width: 91.666667%; }
+  .col-lg-12 { width: 100%; }
+  
+  /* Offsets - lg */
+  .col-lg-offset-0 { margin-left: 0; }
+  .col-lg-offset-1 { margin-left: 8.333333%; }
+  .col-lg-offset-2 { margin-left: 16.666667%; }
+  .col-lg-offset-3 { margin-left: 25%; }
+  .col-lg-offset-4 { margin-left: 33.333333%; }
+  .col-lg-offset-5 { margin-left: 41.666667%; }
+  .col-lg-offset-6 { margin-left: 50%; }
+  .col-lg-offset-7 { margin-left: 58.333333%; }
+  .col-lg-offset-8 { margin-left: 66.666667%; }
+  .col-lg-offset-9 { margin-left: 75%; }
+  .col-lg-offset-10 { margin-left: 83.333333%; }
+  .col-lg-offset-11 { margin-left: 91.666667%; }
+}
+
+/* ============================================
+   Bootstrap-like Buttons using Tailwind 4
+   ============================================ */
+
+.btn {
+  @apply inline-block mb-1 mr-1 font-normal text-center align-middle cursor-pointer 
+         bg-transparent border border-transparent whitespace-nowrap 
+         py-[10px] px-5 text-sm leading-[1.42857143] rounded
+         transition-all duration-500 ease-in-out;
+  touch-action: manipulation;
+  user-select: none;
+  
+  &:hover, &:focus {
+    @apply no-underline;
+  }
+  
+  &:active, &.active {
+    @apply outline-none shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  }
+  
+  &.disabled, &[disabled] {
+    @apply cursor-not-allowed opacity-65;
+  }
+}
+
+.btn-default {
+  @apply text-[#333] bg-white border-[#ccc];
+  
+  &:hover, &:focus {
+    @apply text-[#333] bg-[#e6e6e6] border-[#adadad];
+  }
+}
+
+.btn-primary {
+  @apply text-white bg-[#a10129] border-[#8c0123];
+  
+  &:hover, &:focus {
+    @apply text-white bg-[#8c0123] border-[#6d011b];
+  }
+}
+
+.btn-success {
+  @apply text-white bg-[#5cb85c] border-[#4cae4c];
+  
+  &:hover, &:focus {
+    @apply text-white bg-[#449d44] border-[#398439];
+  }
+}
+
+.btn-info {
+  @apply text-white bg-[#5bc0de] border-[#46b8da];
+  
+  &:hover, &:focus {
+    @apply text-white bg-[#31b0d5] border-[#269abc];
+  }
+}
+
+.btn-warning {
+  @apply text-white bg-[#f0ad4e] border-[#eea236];
+  
+  &:hover, &:focus {
+    @apply text-white bg-[#ec971f] border-[#d58512];
+  }
+}
+
+.btn-danger {
+  @apply text-white bg-[#d9534f] border-[#d43f3a];
+  
+  &:hover, &:focus {
+    @apply text-white bg-[#c9302c] border-[#ac2925];
+  }
+}
+
+/* Button sizes */
+.btn-lg {
+  @apply py-[10px] px-5 text-lg leading-[1.33333] rounded-md;
+}
+
+.btn-sm {
+  @apply py-[5px] px-5 text-xs leading-[1.5] rounded-sm;
+}
+
+.btn-xs {
+  @apply py-[1px] px-[5px] text-xs leading-[1.5] rounded-sm;
+}
+
+/* ============================================
+   Bootstrap-like Utilities using Tailwind 4
+   ============================================ */
+
+/* Text alignment */
+.text-left { @apply text-left; }
+.text-right { @apply text-right; }
+.text-center { @apply text-center; }
+.text-justify { @apply text-justify; }
+
+/* Floats */
+.pull-left { @apply float-left; }
+.pull-right { @apply float-right; }
+
+/* Clearfix */
+.clearfix::after {
+  @apply block clear-both;
+  content: "";
+}
+
+/* Visibility */
+.hidden { @apply hidden; }
+.visible { @apply visible; }
+
+/* Image responsive */
+.img-responsive {
+  @apply block max-w-full h-auto;
+}
+
+.img-rounded {
+  @apply rounded-md;
+}
+
+.img-circle {
+  @apply rounded-full;
+}
+
+/* Form control */
+.form-control {
+  @apply block w-full h-[42px] py-[10px] px-3 text-sm leading-[1.42857143] 
+         text-[#555] bg-white border border-[#ccc] rounded
+         shadow-[inset_0_1px_1px_rgba(0,0,0,0.075)]
+         transition-[border-color,box-shadow] duration-150 ease-in-out;
+  
+  &:focus {
+    @apply border-[#a10129] outline-none shadow-[inset_0_1px_1px_rgba(0,0,0,0.075),0_0_8px_rgba(161,1,41,0.6)];
+  }
+}
+
+.form-group {
+  @apply mb-[15px];
+}
+
+/* ============================================
+   End of Bootstrap-like Classes
+   ============================================ */
 :root {
   /* Wedding Theme Colors */
   --color-primary-dark: #3a3a3a;

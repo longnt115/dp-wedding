@@ -18,9 +18,9 @@ export default function Banner() {
       data-stellar-background-ratio="0.5"
     >
       <div className="overlay"></div>
-      <div className="max-w-[1170px] mx-auto px-[15px] relative z-1">
-        <div className="flex flex-wrap -mx-[15px]">
-          <div className="w-full md:w-10/12 md:ml-[8.333333%] px-[15px] text-center">
+      <div className="container relative z-1">
+        <div className="row">
+          <div className="col-md-10 col-md-offset-1 text-center">
             <div className="display-t nunito-semibold">
               <div
                 className="display-tc animate-box"
@@ -31,10 +31,7 @@ export default function Banner() {
                 <h2 className="nunito-regular">27 Tháng 12 Năm 2025</h2>
                 {/* <div className="simply-countdown simply-countdown-one"></div> */}
                 <p>
-                  <a
-                    href="#"
-                    className="inline-block px-5 py-2 text-sm font-normal text-[#333] bg-white border border-[#ccc] rounded-[30px] transition-all duration-500 hover:shadow-lg"
-                  >
+                  <a href="#" className="btn btn-default btn-sm">
                     Save the date
                   </a>
                 </p>

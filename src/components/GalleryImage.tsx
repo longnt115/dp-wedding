@@ -7,9 +7,9 @@ import "swiper/css/pagination";
 export const GalleryImage = () => {
   return (
     <div id="fh5co-gallery" className="fh5co-section-gray">
-      <div className="max-w-[1170px] mx-auto px-[15px]">
-        <div className="flex flex-wrap -mx-[15px]">
-          <div className="w-full md:w-8/12 md:ml-[16.666667%] px-[15px] text-center fh5co-heading animate-box">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
             <span>Our Memories</span>
             <h2 className="text-wedding-bride-red">Wedding Gallery</h2>
             <p>
@@ -18,8 +18,8 @@ export const GalleryImage = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-wrap -mx-[15px] row-bottom-padded-md justify-center">
-          <div className="w-full md:w-11/12 px-[15px]">
+        <div className="row row-bottom-padded-md flex justify-center">
+          <div className="col-md-11">
             <div
               id="fh5co-gallery-list"
               className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4 auto-rows-[70px] sm:auto-rows-[90px] lg:auto-rows-[110px]"
@@ -172,7 +172,7 @@ export const GalleryImage = () => {
                 <img
                   src="/assets/images/gallery-8.jpg"
                   alt="Gallery 8"
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <a
                   href="images/gallery-8.jpg"

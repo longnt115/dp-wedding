@@ -3,9 +3,9 @@ import Image from "next/image";
 export const GroomBride = () => {
   return (
     <div id="fh5co-couple">
-      <div className="max-w-[1170px] mx-auto px-[15px]">
-        <div className="flex flex-wrap -mx-[15px]">
-          <div className="w-full md:w-8/12 md:ml-[16.666667%] px-[15px] text-center fh5co-heading animate-box">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
             <h2 className="text-wedding-bride-red">Hello!</h2>
             <h3>11h00 Ngày 27 Tháng 12 Năm 2025</h3>
             <p>We invited you to celebrate our wedding</p>
@@ -19,7 +19,7 @@ export const GroomBride = () => {
                 alt="groom"
                 width={150}
                 height={150}
-                className="max-w-full h-auto"
+                className="img-responsive"
               />
             </div>
             <div className="desc-groom">
@@ -41,7 +41,7 @@ export const GroomBride = () => {
                 alt="bride"
                 width={150}
                 height={150}
-                className="max-w-full h-auto"
+                className="img-responsive"
               />
             </div>
             <div className="desc-bride">
