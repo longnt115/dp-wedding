@@ -12,7 +12,7 @@ export const GroomBride = () => {
           </div>
         </div>
         <div className="couple-wrap">
-          <div className="couple-half">
+          <div className="couple-half relative">
             <div className="groom">
               <Image
                 src="/assets/images/groom.jpg"
@@ -22,7 +22,7 @@ export const GroomBride = () => {
                 className="img-responsive"
               />
             </div>
-            <div className="desc-groom">
+            <div className="desc-groom md:absolute">
               <h3>Nguyễn Hải Đăng</h3>
               <p>
                 Far far away, behind the word mountains, far from the countries
@@ -34,7 +34,7 @@ export const GroomBride = () => {
           <p className="heart text-center">
             <i className="icon-heart2"></i>
           </p>
-          <div className="couple-half">
+          <div className="couple-half relative">
             <div className="bride">
               <Image
                 src="/assets/images/bride.webp"
@@ -44,7 +44,7 @@ export const GroomBride = () => {
                 className="img-responsive"
               />
             </div>
-            <div className="desc-bride">
+            <div className="desc-bride md:absolute">
               <h3>Nguyễn Bích Phượng</h3>
               <p>
                 Far far away, behind the word mountains, far from the countries

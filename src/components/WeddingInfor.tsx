@@ -15,7 +15,7 @@ export const WeddingInfor = () => {
       className="fh5co-bg"
       style={{
         backgroundImage: "url(assets/images/TVL_7046.webp)",
-        backgroundPosition: "bottom",
+        backgroundPosition: "bottom right -4.5rem",
       }}
     >
       <div className="overlay"></div>
@@ -26,11 +26,11 @@ export const WeddingInfor = () => {
           </div>
         </div>
       </div>
-      <div className="row relative z-1">
+      <div className="relative z-1 flex flex-wrap">
         <div className="display-t">
           <div className="display-tc">
             <div className="col-md-6 flex justify-center">
-              <div className="col-md-offset-1 col-md-8 col-sm-8 text-center text-white">
+              <div className="col-md-offset-1 col-md-9 col-sm-9 text-center text-white">
                 <div className="event-wrap animate-box">
                   <h3> Hải Đăng & Bích Phượng</h3>
                   <motion.div

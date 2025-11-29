@@ -2,9 +2,14 @@
 export const dynamic = "force-dynamic";
 
 import { useSearchParams } from "next/navigation";
+import { preload } from "react-dom";
 export default function Banner() {
   const searchParams = useSearchParams();
   const guest = searchParams.get("guest");
+  preload("/assets/images/TVL_6408.webp", {
+    as: "image",
+    fetchPriority: "high",
+  });
 
   return (
     <header
