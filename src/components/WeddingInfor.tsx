@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Countdown from "./Countdown";
 
 interface TimeLeft {
@@ -12,12 +13,15 @@ export const WeddingInfor = () => {
   return (
     <div
       id="fh5co-event"
-      className="fh5co-bg"
-      style={{
-        backgroundImage: "url(assets/images/TVL_7046.webp)",
-        backgroundPosition: "bottom right -4.5rem",
-      }}
+      className="fh5co-bg relative"
     >
+      <Image
+        src="/assets/images/TVL_7046.webp"
+        alt="Wedding ceremony background"
+        fill
+        className="object-cover object-[bottom_0_right_-5.75rem] md:object-[bottom-right] -z-10"
+        priority={false}
+      />
       <div className="overlay"></div>
       <div className="container relative z-1">
         <div className="row">
