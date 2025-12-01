@@ -19,9 +19,10 @@ export const EventPlace = () => {
 
           <div className="col-md-6">
             <div className="text-center flex flex-col h-full justify-center items-center">
-              <h2 className="text-[#a10129] dancing-script-semibold text-[2.5rem] md:text-[3.75rem]">
+              <h2 className="text-[#a10129] dancing-script-semibold text-[2.5rem] md:text-[3.75rem] mb-0 sm:mb-[10px]">
                 Địa Điểm Tổ Chức
               </h2>
+              <span className="h-[2px] w-20 md:w-25 bg-[#a10129] block mb-2 md:mb-5 mx-auto sm:mb-[10px]"></span>
               <h3 className="text-[1.25rem] mb-5 leading-none">
                 Trung Tâm Tiệc Cưới & Sự Kiện Promes Center <br />
                 <span className="text-[1rem] dancing-thin text-gray-600 ">

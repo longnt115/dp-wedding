@@ -10,7 +10,10 @@ export const GalleryImage = () => {
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
             <span>Our Memories</span>
-            <h2 className="text-wedding-bride-red">Album Hình Cưới</h2>
+            <h2 className="text-wedding-bride-red !mb-0 sm:mb-[10px]">
+              Album Hình Cưới
+            </h2>
+            <span className="h-[2px] w-20 md:w-25 bg-[#a10129] block mb-2 md:mb-5 mx-auto"></span>
             <p>
               Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts.

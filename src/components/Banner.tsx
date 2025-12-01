@@ -27,19 +27,12 @@ export default function Banner() {
         <div className="row">
           <div className="col-md-10 col-md-offset-1 text-center">
             <div className="display-t nunito-semibold">
-              <div
-                className="display-tc animate-box"
-                data-animate-effect="fadeIn"
-              >
-                <h1>Hải Đăng &amp; Bích Phượng</h1>
-                {/* <div className="bg-white h-1 w-[5rem] my-2 mx-auto"></div> */}
+              <div className="display-tc" data-animate-effect="fadeIn">
+                <h1 className="!mt-[25vh] sm:!text-[70px] md:!text-[75px] text-[100px]">
+                  Hải Đăng &amp; Bích Phượng
+                </h1>
+                <span className="h-[2px] w-20 md:w-25 bg-white block mb-2 md:mb-5 mx-auto"></span>
                 <h2 className="nunito-regular">Thứ bảy 27 Tháng 12 Năm 2025</h2>
-                {/* <div className="simply-countdown simply-countdown-one"></div> */}
-                {/* <p>
-                  <a href="#" className="btn btn-default btn-sm">
-                    Save the date
-                  </a>
-                </p> */}
               </div>
             </div>
           </div>
