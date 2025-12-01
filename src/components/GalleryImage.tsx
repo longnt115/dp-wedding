@@ -18,7 +18,7 @@ export const GalleryImage = () => {
           </div>
         </div>
         <div className="row row-bottom-padded-md flex justify-center">
-          <div className="col-md-11">
+          <div className="col-md-12">
             <PhotoProvider>
               <div
                 id="fh5co-gallery-list"
@@ -28,10 +28,10 @@ export const GalleryImage = () => {
                 <div
                   className="relative overflow-hidden group animate-box row-span-4"
                   data-animate-effect="fadeIn"
-                > 
-                  <PhotoView src="/assets/images/TVL_4882.webp">
+                >
+                  <PhotoView src="/assets/images/TVL_3905.JPG">
                     <Image
-                      src="/assets/images/TVL_4882.webp"
+                      src="/assets/images/TVL_3905.JPG"
                       alt="Gallery 1"
                       className="object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
                       fill
@@ -45,9 +45,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden row-span-5 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/TVL_4853.JPG">
+                  <PhotoView src="/assets/images/TVL_4627.JPG">
                     <Image
-                      src="/assets/images/TVL_4853.JPG"
+                      src="/assets/images/TVL_4627.JPG"
                       alt="Gallery 2"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -61,9 +61,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden row-span-4 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/TVL_4905.webp">
+                  <PhotoView src="/assets/images/TVL_4688.JPG">
                     <Image
-                      src="/assets/images/TVL_4905.webp"
+                      src="/assets/images/TVL_4688.JPG"
                       alt="Gallery 3"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -77,9 +77,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden row-span-4 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/gallery-4.webp">
+                  <PhotoView src="/assets/images/TVL_4917.JPG">
                     <Image
-                      src="/assets/images/gallery-4.webp"
+                      src="/assets/images/TVL_4917.JPG"
                       alt="Gallery 4"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -93,9 +93,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden row-span-4 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/gallery-5.webp">
+                  <PhotoView src="/assets/images/TVL_5175.JPG">
                     <Image
-                      src="/assets/images/gallery-5.webp"
+                      src="/assets/images/TVL_5175.JPG"
                       alt="Gallery 5"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       fill
@@ -106,12 +106,12 @@ export const GalleryImage = () => {
 
                 {/* Cột 3 - Ảnh 6: Ảnh ngang */}
                 <div
-                  className="relative overflow-hidden row-span-5 group animate-box"
+                  className="relative overflow-hidden row-span-4 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/gallery-6.webp">
+                  <PhotoView src="/assets/images/TVL_5525.JPG">
                     <Image
-                      src="/assets/images/gallery-6.webp"
+                      src="/assets/images/TVL_5525.JPG"
                       alt="Gallery 6"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -125,9 +125,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden row-span-3 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/gallery-7.webp">
+                  <PhotoView src="/assets/images/TVL_5585.JPG">
                     <Image
-                      src="/assets/images/gallery-7.webp"
+                      src="/assets/images/TVL_5585.JPG"
                       alt="Gallery 7"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       fill
@@ -141,9 +141,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden row-span-3 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/gallery-8.jpg">
+                  <PhotoView src="/assets/images/TVL_6136.webp">
                     <Image
-                      src="/assets/images/gallery-8.jpg"
+                      src="/assets/images/TVL_6136.webp"
                       alt="Gallery 8"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
                       fill

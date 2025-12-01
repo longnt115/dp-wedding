@@ -11,22 +11,26 @@ interface TimeLeft {
 
 export const WeddingInfor = () => {
   return (
-    <div
-      id="fh5co-event"
-      className="fh5co-bg relative"
-    >
+    <div id="fh5co-event" className="fh5co-bg relative">
       <Image
         src="/assets/images/TVL_7046.webp"
         alt="Wedding ceremony background"
         fill
-        className="object-cover object-[bottom_0_right_-5.75rem] md:object-[bottom-right] -z-10"
+        className="object-cover object-[bottom_0_right_-5.75rem] md:object-[bottom_right] -z-10"
         priority={false}
       />
       <div className="overlay"></div>
       <div className="container relative z-1">
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box mb-0">
-            <h2>Lễ Thành Hôn</h2>
+            <h2 className="mb-0">Lễ Thành Hôn</h2>
+            <Image
+              src="/assets/icon/flourish-white-divider.svg"
+              alt="divider"
+              width={300}
+              height={50}
+              className="mx-auto"
+            />
           </div>
         </div>
       </div>
@@ -36,7 +40,10 @@ export const WeddingInfor = () => {
             <div className="col-md-6 flex justify-center">
               <div className="col-md-offset-1 col-md-9 col-sm-9 text-center text-white">
                 <div className="event-wrap animate-box">
-                  <h3> Hải Đăng & Bích Phượng</h3>
+                  <h3 className="dancing-semibold text-2xl">
+                    {" "}
+                    Hải Đăng & Bích Phượng
+                  </h3>
                   <motion.div
                     className="text-center px-2 sm:px-4 my-3 sm:my-5 md:my-0 col-span-5 md:col-span-3 row-start-3 md:row-start-1 order-3 md:order-2"
                     initial={{ opacity: 0, scale: 0.9 }}

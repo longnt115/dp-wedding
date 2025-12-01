@@ -33,13 +33,13 @@ export default function Banner() {
               >
                 <h1>Hải Đăng &amp; Bích Phượng</h1>
                 {/* <div className="bg-white h-1 w-[5rem] my-2 mx-auto"></div> */}
-                <h2 className="nunito-regular">27 Tháng 12 Năm 2025</h2>
+                <h2 className="nunito-regular">Thứ bảy 27 Tháng 12 Năm 2025</h2>
                 {/* <div className="simply-countdown simply-countdown-one"></div> */}
-                <p>
+                {/* <p>
                   <a href="#" className="btn btn-default btn-sm">
                     Save the date
                   </a>
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

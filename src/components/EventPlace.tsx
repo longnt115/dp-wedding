@@ -8,7 +8,7 @@ export const EventPlace = () => {
           <div className="col-md-6">
             <div className="p-1 flex">
               <Image
-                src="/assets/images/TVL_6589.JPG"
+                src="/assets/images/image.webp"
                 height={296}
                 width={480}
                 alt="dia_diem"

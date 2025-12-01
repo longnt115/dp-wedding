@@ -485,12 +485,12 @@ h1, h2, h3, h4, h5, h6, figure {
 			margin-bottom: 10px;
 		}
 		h3{
-			font-size: 20px;
+			// font-size: 20px;
 			color: $brand-white;
 			border-bottom: 1px solid rgba($brand-white,.5);
 			display: block;
 			padding-bottom: 20px;
-			text-transform: uppercase;
+			// text-transform: uppercase;
 			letter-spacing: 2px;
 		}
 		i{
@@ -1066,7 +1066,6 @@ form {
 	h3{
 		font-family: $font-secondary;
 		color: $brand-primary;
-		font-size: 30px;
 	}
 	
 	.groom, .bride{
