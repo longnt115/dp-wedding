@@ -32,9 +32,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden group animate-box row-span-4"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/TVL_3905.JPG">
+                  <PhotoView src="/assets/images/TVL_3905.webp">
                     <Image
-                      src="/assets/images/TVL_3905.JPG"
+                      src="/assets/images/TVL_3905.webp"
                       alt="Gallery 1"
                       className="object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
                       fill
@@ -48,9 +48,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden row-span-5 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/TVL_4627.JPG">
+                  <PhotoView src="/assets/images/TVL_4627.webp">
                     <Image
-                      src="/assets/images/TVL_4627.JPG"
+                      src="/assets/images/TVL_4627.webp"
                       alt="Gallery 2"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -64,9 +64,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden row-span-4 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/TVL_4688.JPG">
+                  <PhotoView src="/assets/images/TVL_4688.webp">
                     <Image
-                      src="/assets/images/TVL_4688.JPG"
+                      src="/assets/images/TVL_4688.webp"
                       alt="Gallery 3"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -80,9 +80,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden row-span-4 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/TVL_4917.JPG">
+                  <PhotoView src="/assets/images/TVL_4917.webp">
                     <Image
-                      src="/assets/images/TVL_4917.JPG"
+                      src="/assets/images/TVL_4917.webp"
                       alt="Gallery 4"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -96,9 +96,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden row-span-4 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/TVL_5175.JPG">
+                  <PhotoView src="/assets/images/TVL_5175.webp">
                     <Image
-                      src="/assets/images/TVL_5175.JPG"
+                      src="/assets/images/TVL_5175.webp"
                       alt="Gallery 5"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       fill
@@ -112,9 +112,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden row-span-4 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/TVL_5525.JPG">
+                  <PhotoView src="/assets/images/TVL_5525.webp">
                     <Image
-                      src="/assets/images/TVL_5525.JPG"
+                      src="/assets/images/TVL_5525.webp"
                       alt="Gallery 6"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -128,9 +128,9 @@ export const GalleryImage = () => {
                   className="relative overflow-hidden row-span-3 group animate-box"
                   data-animate-effect="fadeIn"
                 >
-                  <PhotoView src="/assets/images/TVL_5585.JPG">
+                  <PhotoView src="/assets/images/TVL_5585.webp">
                     <Image
-                      src="/assets/images/TVL_5585.JPG"
+                      src="/assets/images/TVL_5585.webp"
                       alt="Gallery 7"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       fill

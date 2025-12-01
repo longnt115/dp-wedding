@@ -1,5 +1,6 @@
 "use client";
 
+import { BackgroundMusic } from "@/components/BackgoundMusic";
 import Banner from "@/components/Banner";
 import { GroomBride } from "@/components/GroomBride";
 import { WeddingInfor } from "@/components/WeddingInfor";
@@ -33,6 +34,7 @@ export default function Home() {
         <EventPlace />
         <GalleryImage />
         <Footer />
+        <BackgroundMusic/>
       </Suspense>
     </main>
   );
