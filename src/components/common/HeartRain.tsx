@@ -1,10 +1,12 @@
+import type { Heart } from "@/types";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+
 export default function HeartRain() {
-  const [hearts, setHearts] = useState<any[]>([]);
+  const [hearts, setHearts] = useState<Heart[]>([]);
 
   useEffect(() => {
-    const createHeart = () => {
+    const createHeart = (): Heart => {
       const id = Date.now() + Math.random();
       const left = Math.random() * 100;
       const size = Math.random() * 5 + 30;

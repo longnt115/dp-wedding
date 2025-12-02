@@ -44,3 +44,12 @@ export interface TimelineEvent {
   title: string;
   description: string;
 }
+
+export interface Heart {
+  id: number;
+  left: number;
+  size: number;
+  duration: number;
+  delay: number;
+  opacity: number;
+}
