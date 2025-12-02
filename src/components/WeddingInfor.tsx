@@ -15,7 +15,7 @@ export const WeddingInfor = () => {
       <div className="overlay"></div>
       <div className="container relative z-1">
         <div className="row">
-          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box mb-0">
+          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading  mb-0">
             <h2 className="mb-0">Lễ Thành Hôn</h2>
             {/* <Image
               src="/assets/icon/flourish-white-divider.svg"
@@ -32,7 +32,7 @@ export const WeddingInfor = () => {
           <div className="display-tc">
             <div className="col-md-6 flex justify-center">
               <div className="col-md-offset-1 col-md-9 col-sm-9 text-center text-white">
-                <div className="event-wrap animate-box">
+                <div className="event-wrap ">
                   <h3 className="dancing-semibold text-2xl">
                     {" "}
                     Hải Đăng & Bích Phượng
@@ -72,7 +72,7 @@ export const WeddingInfor = () => {
                 </div>
               </div>
               {/* <div className="col-md-6 col-sm-6 text-center">
-                  <div className="event-wrap animate-box">
+                  <div className="event-wrap ">
                     <h3>Wedding Party</h3>
                     <div className="event-col">
                       <i className="icon-clock"></i>

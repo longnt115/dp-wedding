@@ -25,6 +25,12 @@ export default function Home() {
     }))
   );
 
+  const HeartRain = lazy(() =>
+    import("@/components/common/HeartRain").then((module) => ({
+      default: module.default,
+    }))
+  );
+
   return (
     <main className="min-h-screen">
       <Suspense fallback={<div>Loading...</div>}>
@@ -34,7 +40,8 @@ export default function Home() {
         <EventPlace />
         <GalleryImage />
         <Footer />
-        <BackgroundMusic/>
+        <BackgroundMusic />
+        <HeartRain />
       </Suspense>
     </main>
   );
