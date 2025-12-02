@@ -46,7 +46,7 @@ export const BackgroundMusic = () => {
     return () => {
       document.removeEventListener("click", userInteraction);
     };
-  }, []);
+  }, [userInteraction]);
 
   const handleMusicToggle = () => {
     const audio = audioRef.current;

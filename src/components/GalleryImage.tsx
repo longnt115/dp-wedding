@@ -1,3 +1,4 @@
+import { shuffle } from "@/hook/useArray";
 import "@/styles/components/OurStory.scss";
 import Image from "next/image";
 import { PhotoProvider, PhotoView } from "react-photo-view";
@@ -47,6 +48,8 @@ const galleryImages = [
 ];
 
 export const GalleryImage = () => {
+  const displayGalleryImages = shuffle(galleryImages);
+
   return (
     <div id="fh5co-gallery" className="fh5co-section-gray">
       <div className="container">
@@ -71,7 +74,7 @@ export const GalleryImage = () => {
                 className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4 auto-rows-[70px] sm:auto-rows-[90px] lg:auto-rows-[110px]"
               >
                 {/* Cột 1 - Ảnh 1: Ảnh ngang */}
-                {galleryImages.map((image, index) => (
+                {displayGalleryImages.map((image, index) => (
                   <div
                     className={`relative overflow-hidden group animate-box ${image.className}`}
                     data-animate-effect="fadeIn"
