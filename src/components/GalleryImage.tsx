@@ -64,7 +64,7 @@ export const GalleryImage = () => {
           <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
             <span>Our Memories</span>
             <h2 className="text-wedding-bride-red !mb-0 sm:mb-[10px]">
-              Album Hình Cưới {displayGalleryImages.length}
+              Album Hình Cưới
             </h2>
             <span className="h-[2px] w-20 md:w-25 bg-[#a10129] block mb-2 md:mb-5 mx-auto"></span>
             <p>

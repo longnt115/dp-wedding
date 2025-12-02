@@ -28,11 +28,14 @@ export default function HeartRain() {
   }, []);
 
   return (
-    <div className="sticky bottom-0 w-full h-screen bg-transparent overflow-hidden">
+    <div
+      id="heart-rain-section"
+      className="fixed inset-0 w-full h-screen bg-transparent overflow-hidden pointer-events-none z-10"
+    >
       {hearts.map((heart) => (
         <div
           key={heart.id}
-          className="absolute animate-fall"
+          className="absolute animate-fall z-50"
           style={{
             left: `${heart.left}%`,
             top: "-50px",
