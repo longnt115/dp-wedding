@@ -2,13 +2,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Countdown from "./Countdown";
 
-interface TimeLeft {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
-
 export const WeddingInfor = () => {
   return (
     <div id="fh5co-event" className="fh5co-bg relative">
@@ -24,13 +17,13 @@ export const WeddingInfor = () => {
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box mb-0">
             <h2 className="mb-0">Lễ Thành Hôn</h2>
-            <Image
+            {/* <Image
               src="/assets/icon/flourish-white-divider.svg"
               alt="divider"
               width={300}
               height={50}
               className="mx-auto"
-            />
+            /> */}
           </div>
         </div>
       </div>

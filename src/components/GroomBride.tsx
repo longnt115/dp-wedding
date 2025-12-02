@@ -15,7 +15,7 @@ export const GroomBride = () => {
           <div className="couple-half relative">
             <div className="groom">
               <Image
-                src="/assets/images/groom.jpg"
+                src="/assets/images/groom.webp"
                 alt="groom"
                 width={150}
                 height={150}
