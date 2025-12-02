@@ -2,6 +2,8 @@
 
 import { BackgroundMusic } from "@/components/BackgoundMusic";
 import Banner from "@/components/Banner";
+import { Loader } from "@/components/common/Loader";
+import { EventPlace } from "@/components/EventPlace";
 import { GroomBride } from "@/components/GroomBride";
 import { WeddingInfor } from "@/components/WeddingInfor";
 import { lazy, Suspense } from "react";
@@ -13,18 +15,6 @@ export default function Home() {
     }))
   );
 
-  const Footer = lazy(() =>
-    import("@/components/Footer").then((module) => ({
-      default: module.Footer,
-    }))
-  );
-
-  const EventPlace = lazy(() =>
-    import("@/components/EventPlace").then((module) => ({
-      default: module.EventPlace,
-    }))
-  );
-
   const HeartRain = lazy(() =>
     import("@/components/common/HeartRain").then((module) => ({
       default: module.default,
@@ -33,13 +23,12 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader/>}>
         <Banner />
         <GroomBride />
         <WeddingInfor />
         <EventPlace />
         <GalleryImage />
-        <Footer />
         <BackgroundMusic />
         <HeartRain />
       </Suspense>

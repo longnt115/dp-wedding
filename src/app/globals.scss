@@ -49,7 +49,6 @@
 }
 
 // Animation library
-@import "@/styles/animate.scss";
 @import "@/styles/icomoon.scss";
 
 // Theme styles (Bootstrap removed - using Tailwind only)
@@ -604,4 +603,36 @@ body {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+}
+
+/* Music Icon Spinning Animation */
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#icon-music {
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+
+#icon-music.pause-state {
+  -webkit-animation: none;
+  animation: none;
+  opacity: 1;
 }

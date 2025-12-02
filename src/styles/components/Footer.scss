@@ -1,7 +1,7 @@
 .wd-footer-content {
     &::before, &::after {
         content: "";
-        width: 100px;
+        width: 90px;
         height: 87px;
         position: absolute;
         z-index: 2;
@@ -25,7 +25,7 @@
     }
 
     &::after {
-        top: -12px;
+        top: -20px;
         right: auto;
         left: -12px;
         -webkit-transform: rotate(-130deg);

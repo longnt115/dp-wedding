@@ -35,6 +35,7 @@ export const EventPlace = () => {
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.887128703285!2d105.7872311!3d21.0372018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab277ebd8c1b%3A0xa3b26494470bd077!2zVHJ1bmcgVMOibSBUaeG7h2MgQ8aw4bubaSAmIFPhu7EgS2nhu4duIFByb21lcyBDZW50ZXI!5e0!3m2!1sen!2s!4v1764346457498!5m2!1sen!2s"
                     className="w-full h-full border-0 rounded-lg shadow-lg"
                     loading="lazy"
+                    title="event-place-map"
                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>

@@ -2,6 +2,7 @@ import { shuffle } from "@/hook/useArray";
 import "@/styles/components/OurStory.scss";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { isMobile, isTablet } from "react-device-detect";
 import { PhotoProvider, PhotoSlider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 
@@ -32,17 +33,30 @@ const getMasonryClass = (index: number): string => {
   // Cột 1: tall, medium, medium (tổng 13 rows)
   // Cột 2: medium, tall, medium (tổng 13 rows)
   // Cột 3: medium, medium, tall (tổng 13 rows)
-  const pattern = [
-    "row-span-5", // 0: Cột 1 - tall
-    "row-span-4", // 1: Cột 2 - medium
-    "row-span-4", // 2: Cột 3 - medium
-    "row-span-5", // 3: Cột 1 - medium
-    "row-span-4", // 4: Cột 2 - tall
-    "row-span-4", // 5: Cột 3 - medium
-    "row-span-5", // 6: Cột 1 - medium
-    "row-span-4", // 7: Cột 2 - medium
-    "row-span-4", // 8: Cột 3 - tall
-  ];
+  const pattern =
+    isMobile || isTablet
+      ? [
+          "row-span-4", // 0: Cột 1 - tall
+          "row-span-3", // 1: Cột 2 - medium
+          "row-span-3", // 2: Cột 3 - medium
+          "row-span-4", // 3: Cột 1 - medium
+          "row-span-3", // 4: Cột 2 - tall
+          "row-span-4", // 5: Cột 3 - medium
+          "row-span-4", // 6: Cột 1 - medium
+          "row-span-4", // 7: Cột 2 - medium
+          "row-span-3", // 8: Cột 3 - tall
+        ]
+      : [
+          "row-span-5", // 0: Cột 1 - tall
+          "row-span-4", // 1: Cột 2 - medium
+          "row-span-4", // 2: Cột 3 - medium
+          "row-span-5", // 3: Cột 1 - medium
+          "row-span-4", // 4: Cột 2 - tall
+          "row-span-4", // 5: Cột 3 - medium
+          "row-span-5", // 6: Cột 1 - medium
+          "row-span-4", // 7: Cột 2 - medium
+          "row-span-4", // 8: Cột 3 - tall
+        ];
   return pattern[index % 9];
 };
 
@@ -62,14 +76,13 @@ export const GalleryImage = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
-            <span>Our Memories</span>
+            <span>Kỷ Niệm Chúng Mình</span>
             <h2 className="text-wedding-bride-red !mb-0 sm:mb-[10px]">
               Album Hình Cưới
             </h2>
             <span className="h-[2px] w-20 md:w-25 bg-[#a10129] block mb-2 md:mb-5 mx-auto"></span>
             <p>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts.
+            Lưu giữ từng khoảnh khắc yêu thương, mỗi ánh mắt, mỗi cái nắm tay là câu chuyện hạnh phúc bất tận cùng nhau.
             </p>
           </div>
         </div>
@@ -84,7 +97,7 @@ export const GalleryImage = () => {
                   <PhotoView src={image.src} key={index}>
                     {index < 9 ? (
                       <div
-                        className={`relative overflow-hidden group  ${getMasonryClass(
+                        className={`relative overflow-hidden group ${getMasonryClass(
                           index
                         )}`}
                         data-animate-effect="fadeIn"
