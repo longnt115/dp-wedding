@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { isMobile, isTablet } from "react-device-detect";
 import { useDebouncedCallback } from "use-debounce";
 
 export const BackgroundMusic = () => {
@@ -11,37 +10,66 @@ export const BackgroundMusic = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const iconRef = useRef<HTMLButtonElement>(null);
   const toggleRef = useRef<HTMLDivElement>(null);
+  // Track mounted state để tránh setState sau unmount
+  const isMountedRef = useRef(true);
 
-  // Show hint after 1 second delay
+  // Show hint after 500ms delay
   useEffect(() => {
     const hintTimer = setTimeout(() => {
-      setShowHint(true);
+      if (isMountedRef.current) {
+        setShowHint(true);
+      }
     }, 500);
     return () => clearTimeout(hintTimer);
   }, []);
 
-  const userInteraction = useDebouncedCallback(() => {
-    setIsInteracted(true);
-    playAudio();
-    if (isMobile || isTablet) setShowHint(false);
-  }, 300);
-
-  const playAudio = async () => {
+  const playAudio = useCallback(async () => {
     try {
       const audio = audioRef.current;
-      if (!audio) return;
+      if (!audio || !isMountedRef.current) return;
       await audio.play();
-      setIsPlaying(true);
+      if (isMountedRef.current) {
+        setIsPlaying(true);
+      }
     } catch (error) {
       console.log("Autoplay blocked or failed:", error);
-      setIsPlaying(false);
+      if (isMountedRef.current) {
+        setIsPlaying(false);
+      }
     }
-  };
+  }, []);
+
+  // Detect mobile/tablet một lần
+  const isMobileDevice = useRef<boolean | null>(null);
+
+  const userInteraction = useDebouncedCallback(() => {
+    if (!isMountedRef.current) return;
+
+    setIsInteracted(true);
+    playAudio();
+
+    // Lazy check mobile để tránh reflow
+    if (isMobileDevice.current === null) {
+      isMobileDevice.current =
+        /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
+          navigator.userAgent.toLowerCase()
+        );
+    }
+
+    if (isMobileDevice.current) {
+      setShowHint(false);
+    }
+  }, 300);
 
   useEffect(() => {
+    isMountedRef.current = true;
+
     document.addEventListener("click", userInteraction, { once: true });
+
     return () => {
+      isMountedRef.current = false;
       document.removeEventListener("click", userInteraction);
+      userInteraction.cancel(); // Cancel debounce khi unmount
     };
   }, [userInteraction]);
 
@@ -56,24 +84,28 @@ export const BackgroundMusic = () => {
     setIsPlaying(!isPlaying);
   }, [isPlaying]);
 
-  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      handleMusicToggle();
-    }
-  }, [handleMusicToggle]);
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        handleMusicToggle();
+      }
+    },
+    [handleMusicToggle]
+  );
 
-  const handleMouseEnter = () => {
+  // Sử dụng useCallback cho event handlers
+  const handleMouseEnter = useCallback(() => {
     setIsIconHover(true);
-  };
+  }, []);
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = useCallback(() => {
     setIsIconHover(false);
-  };
+  }, []);
 
   return (
     <>
-      <div 
+      <div
         className="fixed bottom-4 right-4 flex items-center"
         role="region"
         aria-label="Điều khiển nhạc nền"
@@ -86,7 +118,9 @@ export const BackgroundMusic = () => {
               ? "max-w-[320px] opacity-100 mr-0"
               : "max-w-0 opacity-0 -mr-2"
           }`}
-          aria-hidden={!(showHint && !isPlaying && (!isInteracted || isIconHover))}
+          aria-hidden={
+            !(showHint && !isPlaying && (!isInteracted || isIconHover))
+          }
         >
           Click vào đây nếu bạn muốn bật nhạc!
         </div>

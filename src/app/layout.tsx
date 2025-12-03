@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <head>
-        {/* Preload Nunito Variable Font */}
+        {/* Preload critical fonts only - fonts used in hero/above-the-fold */}
         <link
           rel="preload"
           href="/font/nunito/Nunito-VariableFont_wght.ttf"
@@ -54,21 +54,7 @@ export default function RootLayout({
           type="font/ttf"
           crossOrigin="anonymous"
         />
-        {/* Preload Dancing Script Fonts */}
-        <link
-          rel="preload"
-          href="/font/dancing/DancingScript-Regular.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/font/dancing/DancingScript-Medium.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
+        {/* Only preload SemiBold - most used weight in hero */}
         <link
           rel="preload"
           href="/font/dancing/DancingScript-SemiBold.ttf"
@@ -76,14 +62,7 @@ export default function RootLayout({
           type="font/ttf"
           crossOrigin="anonymous"
         />
-        <link
-          rel="preload"
-          href="/font/dancing/DancingScript-Bold.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        {/* Preload Icomoon Icon Font */}
+        {/* Preconnect for icomoon - non-blocking */}
         <link
           rel="preload"
           href="/font/icomoon/icomoon.woff"

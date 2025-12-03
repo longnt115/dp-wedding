@@ -607,3 +607,23 @@ body {
   animation: none;
   opacity: 1;
 }
+
+/* Heart Rain Animation - GPU accelerated */
+@keyframes heart-fall {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: var(--fall-opacity, 1);
+  }
+  100% {
+    transform: translate3d(20px, 100vh, 0);
+    opacity: 0;
+  }
+}
+
+.heart-fall-animation {
+  animation: heart-fall var(--fall-duration, 5s) linear var(--fall-delay, 0s) forwards;
+  /* GPU acceleration hints */
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
