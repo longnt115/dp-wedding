@@ -4,26 +4,24 @@ import Countdown from "./Countdown";
 
 export const WeddingInfor = () => {
   return (
-    <div id="fh5co-event" className="fh5co-bg relative">
+    <section 
+      id="fh5co-event" 
+      className="fh5co-bg relative"
+      aria-labelledby="wedding-ceremony-heading"
+    >
       <Image
         src="/assets/images/TVL_7046.webp"
-        alt="Wedding ceremony background"
+        alt=""
         fill
         className="object-cover object-[bottom_0_right_-5.75rem] md:object-[bottom_right] -z-10"
         priority={false}
+        aria-hidden="true"
       />
-      <div className="overlay"></div>
+      <div className="overlay" aria-hidden="true"></div>
       <div className="container relative z-1">
         <div className="row">
-          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading  mb-0">
-            <h2 className="mb-0">Lễ Thành Hôn</h2>
-            {/* <Image
-              src="/assets/icon/flourish-white-divider.svg"
-              alt="divider"
-              width={300}
-              height={50}
-              className="mx-auto"
-            /> */}
+          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading mb-0">
+            <h2 id="wedding-ceremony-heading" className="mb-0">Lễ Thành Hôn</h2>
           </div>
         </div>
       </div>
@@ -32,10 +30,9 @@ export const WeddingInfor = () => {
           <div className="display-tc">
             <div className="col-md-6 flex justify-center">
               <div className="col-md-offset-1 col-md-9 col-sm-9 text-center text-white">
-                <div className="event-wrap ">
+                <div className="event-wrap">
                   <h3 className="dancing-semibold text-2xl">
-                    {" "}
-                    Hải Đăng & Bích Phượng
+                    Hải Đăng <span aria-hidden="true">&</span><span className="sr-only"> và </span> Bích Phượng
                   </h3>
                   <motion.div
                     className="text-center px-2 sm:px-4 my-3 sm:my-5 md:my-0 col-span-5 md:col-span-3 row-start-3 md:row-start-1 order-3 md:order-2"
@@ -47,23 +44,26 @@ export const WeddingInfor = () => {
                     <div className="text-wedding-gray900 mb-2">
                       <p className="text-base sm:text-lg md:text-xl barlow-regular flex flex-col">
                         <span className="font-semibold">
-                          11h00 <span className="px-1"> | </span> Thứ bảy
+                          <time dateTime="2025-12-27T11:00:00">
+                            11h00 <span className="px-1" aria-hidden="true"> | </span> Thứ bảy
+                          </time>
                         </span>
                       </p>
                     </div>
                     <div
                       id="wedding-date"
                       className="text-white my-5 sm:my-4 pt-6 pb-4 md:py-8 grid grid-cols-[auto_auto_auto] justify-center items-center gap-0 relative"
+                      aria-label="Ngày cưới: 27 tháng 12 năm 2025"
                     >
                       <div className="flex md:ml-8 ml-6 items-center">
                         <span className="py-[0.5rem] pr-[2rem] text-lg md:text-xl lg:text-3xl dancing-semibold text-right">
-                          27
+                          <span aria-label="Ngày">27</span>
                         </span>
-                        <span className="py-[0.5rem] px-[3rem] md:px-[2.25rem] text-lg md:text-2xl lg:text-4xl dancing-semibold  border-solid border-x-1 sm:border-x-3 border-white">
-                          12
+                        <span className="py-[0.5rem] px-[3rem] md:px-[2.25rem] text-lg md:text-2xl lg:text-4xl dancing-semibold border-solid border-x-1 sm:border-x-3 border-white">
+                          <span aria-label="Tháng">12</span>
                         </span>
                         <span className="py-[0.5rem] pl-[2rem] text-lg md:text-xl lg:text-3xl dancing-semibold text-left">
-                          2025
+                          <span aria-label="Năm">2025</span>
                         </span>
                       </div>
                     </div>
@@ -71,31 +71,10 @@ export const WeddingInfor = () => {
                   <Countdown />
                 </div>
               </div>
-              {/* <div className="col-md-6 col-sm-6 text-center">
-                  <div className="event-wrap ">
-                    <h3>Wedding Party</h3>
-                    <div className="event-col">
-                      <i className="icon-clock"></i>
-                      <span>7:00 PM</span>
-                      <span>12:00 AM</span>
-                    </div>
-                    <div className="event-col">
-                      <i className="icon-calendar"></i>
-                      <span>Monday 28</span>
-                      <span>November, 2016</span>
-                    </div>
-                    <p>
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts. Separated they live in Bookmarksgrove right at the
-                      coast of the Semantics, a large language ocean.
-                    </p>
-                  </div>
-                </div> */}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

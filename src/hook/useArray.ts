@@ -1,7 +1,9 @@
-export const shuffle = <T>(array: T[]) => {
-  for (let i = array.length - 1; i > 0; i--) {
+export const shuffle = <T>(array: T[]): T[] => {
+  // Tạo bản sao để không mutate array gốc
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
-  return array;
+  return shuffled;
 };

@@ -8,18 +8,19 @@ import { GroomBride } from "@/components/GroomBride";
 import { WeddingInfor } from "@/components/WeddingInfor";
 import { lazy, Suspense } from "react";
 
-export default function Home() {
-  const GalleryImage = lazy(() =>
-    import("@/components/GalleryImage").then((module) => ({
-      default: module.GalleryImage,
-    }))
-  );
+const GalleryImage = lazy(() =>
+  import("@/components/GalleryImage").then((module) => ({
+    default: module.GalleryImage,
+  }))
+);
 
-  const HeartRain = lazy(() =>
-    import("@/components/common/HeartRain").then((module) => ({
-      default: module.default,
-    }))
-  );
+const HeartRain = lazy(() =>
+  import("@/components/common/HeartRain").then((module) => ({
+    default: module.default,
+  }))
+);
+
+export default function Home() {
 
   return (
     <main className="min-h-screen">

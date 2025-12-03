@@ -14,9 +14,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Thư Mời Dự Tiệc Cưới",
+  title: "Thư Mời Dự Tiệc Cưới - Hải Đăng & Bích Phượng",
   description:
-    "Join us as we celebrate our love and commitment. Explore our wedding details, gallery, and RSVP.",
+    "Trân trọng kính mời bạn đến dự lễ thành hôn của Hải Đăng và Bích Phượng vào ngày 27 tháng 12 năm 2025.",
+  keywords: ["đám cưới", "wedding", "Hải Đăng", "Bích Phượng", "thiệp cưới"],
+  authors: [{ name: "Hải Đăng & Bích Phượng" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Thư Mời Dự Tiệc Cưới - Hải Đăng & Bích Phượng",
+    description:
+      "Trân trọng kính mời bạn đến dự lễ thành hôn của Hải Đăng và Bích Phượng vào ngày 27 tháng 12 năm 2025.",
+    type: "website",
+    locale: "vi_VN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Thư Mời Dự Tiệc Cưới - Hải Đăng & Bích Phượng",
+    description:
+      "Trân trọng kính mời bạn đến dự lễ thành hôn của Hải Đăng và Bích Phượng vào ngày 27 tháng 12 năm 2025.",
+  },
 };
 
 export default function RootLayout({
@@ -76,7 +95,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
       >
-        <main id="main-content">{children}</main>
+        {/* Skip to main content link for keyboard/screen reader users */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-[#a10129] focus:text-white focus:rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          Bỏ qua đến nội dung chính
+        </a>
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
