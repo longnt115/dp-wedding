@@ -18,7 +18,6 @@ const galleryImages = [
   { src: "/assets/images/TVL_5585.webp", key: "Ảnh cưới 10" },
   { src: "/assets/images/TVL_6136.webp", key: "Ảnh cưới 11" },
   { src: "/assets/images/TVL_6520.webp", key: "Ảnh cưới 13" },
-  { src: "/assets/images/TVL_6565.webp", key: "Ảnh cưới 14" },
   { src: "/assets/images/TVL_6589.webp", key: "Ảnh cưới 15" },
   { src: "/assets/images/TVL_6745.webp", key: "Ảnh cưới 16" },
   { src: "/assets/images/TVL_6883.webp", key: "Ảnh cưới 17" },

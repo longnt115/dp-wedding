@@ -106,7 +106,7 @@ export const BackgroundMusic = () => {
   return (
     <>
       <div
-        className="fixed bottom-4 right-4 flex items-center"
+        className="fixed bottom-4 right-4 flex items-center z-1"
         role="region"
         aria-label="Điều khiển nhạc nền"
       >
