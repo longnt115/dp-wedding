@@ -4,8 +4,8 @@ import Countdown from "./Countdown";
 
 export const WeddingInfor = () => {
   return (
-    <section 
-      id="fh5co-event" 
+    <section
+      id="fh5co-event"
       className="fh5co-bg relative"
       aria-labelledby="wedding-ceremony-heading"
     >
@@ -20,8 +20,14 @@ export const WeddingInfor = () => {
       <div className="overlay" aria-hidden="true"></div>
       <div className="container relative z-1">
         <div className="row">
-          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading mb-0">
-            <h2 id="wedding-ceremony-heading" className="mb-0">Lễ Thành Hôn</h2>
+          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading mb-[5rem]">
+            <h2 id="wedding-ceremony-heading" className="!mb-0">
+              Lễ Thành Hôn
+            </h2>
+            <span
+              className="h-[2px] w-20 md:w-25 bg-white block mx-auto"
+              aria-hidden="true"
+            ></span>
           </div>
         </div>
       </div>
@@ -32,7 +38,8 @@ export const WeddingInfor = () => {
               <div className="col-md-offset-1 col-md-9 col-sm-9 text-center text-white">
                 <div className="event-wrap">
                   <h3 className="dancing-semibold text-2xl">
-                    Hải Đăng <span aria-hidden="true">&</span><span className="sr-only"> và </span> Bích Phượng
+                    Hải Đăng <span aria-hidden="true">&</span>
+                    <span className="sr-only"> và </span> Bích Phượng
                   </h3>
                   <motion.div
                     className="text-center px-2 sm:px-4 my-3 sm:my-5 md:my-0 col-span-5 md:col-span-3 row-start-3 md:row-start-1 order-3 md:order-2"
@@ -45,7 +52,12 @@ export const WeddingInfor = () => {
                       <p className="text-base sm:text-lg md:text-xl barlow-regular flex flex-col">
                         <span className="font-semibold">
                           <time dateTime="2025-12-27T11:00:00">
-                            11h00 <span className="px-1" aria-hidden="true"> | </span> Thứ bảy
+                            11h00{" "}
+                            <span className="px-1" aria-hidden="true">
+                              {" "}
+                              |{" "}
+                            </span>{" "}
+                            Thứ bảy
                           </time>
                         </span>
                       </p>

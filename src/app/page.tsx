@@ -1,6 +1,5 @@
 "use client";
 
-import { BackgroundMusic } from "@/components/BackgoundMusic";
 import Banner from "@/components/Banner";
 import { Loader } from "@/components/common/Loader";
 import { EventPlace } from "@/components/EventPlace";
@@ -20,11 +19,16 @@ const HeartRain = lazy(() =>
   }))
 );
 
-export default function Home() {
+const BackgroundMusic = lazy(() =>
+  import("@/components/BackgoundMusic").then((module) => ({
+    default: module.BackgroundMusic,
+  }))
+);
 
+export default function Home() {
   return (
     <main className="min-h-screen">
-      <Suspense fallback={<Loader/>}>
+      <Suspense fallback={<Loader />}>
         <Banner />
         <GroomBride />
         <WeddingInfor />
