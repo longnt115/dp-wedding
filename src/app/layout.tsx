@@ -1,6 +1,6 @@
-import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { lazy } from "react";
 import "./globals.scss";
 
 const geistSans = Geist({
@@ -38,6 +38,8 @@ export const metadata: Metadata = {
   },
 };
 
+const Footer = lazy(() => import("@/components/Footer").then((mod) => ({ default: mod.Footer })));
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,7 +50,7 @@ export default function RootLayout({
       <head>
         {/* Preload critical fonts only - fonts used in hero/above-the-fold */}
         <link
-          rel="preload"
+          rel="preconnect"
           href="/font/nunito/Nunito-VariableFont_wght.ttf"
           as="font"
           type="font/ttf"
@@ -56,7 +58,7 @@ export default function RootLayout({
         />
         {/* Only preload SemiBold - most used weight in hero */}
         <link
-          rel="preload"
+          rel="preconnect"
           href="/font/dancing/DancingScript-SemiBold.ttf"
           as="font"
           type="font/ttf"

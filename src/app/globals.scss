@@ -212,147 +212,18 @@
 }
 
 /* ============================================
-   Bootstrap-like Buttons using Tailwind 4
+   Utility Classes (Only Used Ones)
    ============================================ */
 
-.btn {
-  @apply inline-block mb-1 mr-1 font-normal text-center align-middle cursor-pointer 
-         bg-transparent border border-transparent whitespace-nowrap 
-         py-[10px] px-5 text-sm leading-[1.42857143] rounded
-         transition-all duration-500 ease-in-out;
-  touch-action: manipulation;
-  user-select: none;
-  
-  &:hover, &:focus {
-    @apply no-underline;
-  }
-  
-  &:active, &.active {
-    @apply outline-none shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
-  }
-  
-  &.disabled, &[disabled] {
-    @apply cursor-not-allowed opacity-65;
-  }
-}
-
-.btn-default {
-  @apply text-[#333] bg-white border-[#ccc];
-  
-  &:hover, &:focus {
-    @apply text-[#333] bg-[#e6e6e6] border-[#adadad];
-  }
-}
-
-.btn-primary {
-  @apply text-white bg-[#a10129] border-[#8c0123];
-  
-  &:hover, &:focus {
-    @apply text-white bg-[#8c0123] border-[#6d011b];
-  }
-}
-
-.btn-success {
-  @apply text-white bg-[#5cb85c] border-[#4cae4c];
-  
-  &:hover, &:focus {
-    @apply text-white bg-[#449d44] border-[#398439];
-  }
-}
-
-.btn-info {
-  @apply text-white bg-[#5bc0de] border-[#46b8da];
-  
-  &:hover, &:focus {
-    @apply text-white bg-[#31b0d5] border-[#269abc];
-  }
-}
-
-.btn-warning {
-  @apply text-white bg-[#f0ad4e] border-[#eea236];
-  
-  &:hover, &:focus {
-    @apply text-white bg-[#ec971f] border-[#d58512];
-  }
-}
-
-.btn-danger {
-  @apply text-white bg-[#d9534f] border-[#d43f3a];
-  
-  &:hover, &:focus {
-    @apply text-white bg-[#c9302c] border-[#ac2925];
-  }
-}
-
-/* Button sizes */
-.btn-lg {
-  @apply py-[10px] px-5 text-lg leading-[1.33333] rounded-md;
-}
-
-.btn-sm {
-  @apply py-[5px] px-5 text-xs leading-[1.5] rounded-sm;
-}
-
-.btn-xs {
-  @apply py-[1px] px-[5px] text-xs leading-[1.5] rounded-sm;
-}
-
-/* ============================================
-   Bootstrap-like Utilities using Tailwind 4
-   ============================================ */
-
-/* Text alignment */
-.text-left { @apply text-left; }
-.text-right { @apply text-right; }
-.text-center { @apply text-center; }
-.text-justify { @apply text-justify; }
-
-/* Floats */
-.pull-left { @apply float-left; }
-.pull-right { @apply float-right; }
-
-/* Clearfix */
-.clearfix::after {
-  @apply block clear-both;
-  content: "";
-}
-
-/* Visibility */
-.hidden { @apply hidden; }
-.visible { @apply visible; }
-
-/* Image responsive */
+/* Image responsive - USED in GroomBride.tsx */
 .img-responsive {
   @apply block max-w-full h-auto;
 }
 
-.img-rounded {
-  @apply rounded-md;
-}
-
-.img-circle {
-  @apply rounded-full;
-}
-
-/* Form control */
-.form-control {
-  @apply block w-full h-[42px] py-[10px] px-3 text-sm leading-[1.42857143] 
-         text-[#555] bg-white border border-[#ccc] rounded
-         shadow-[inset_0_1px_1px_rgba(0,0,0,0.075)]
-         transition-[border-color,box-shadow] duration-150 ease-in-out;
-  
-  &:focus {
-    @apply border-[#a10129] outline-none shadow-[inset_0_1px_1px_rgba(0,0,0,0.075),0_0_8px_rgba(161,1,41,0.6)];
-  }
-}
-
-.form-group {
-  @apply mb-[15px];
-}
-
 /* ============================================
-   End of Bootstrap-like Classes
+   End of Grid System
    ============================================ */
+
 :root {
   /* Wedding Theme Colors */
   --color-primary-dark: #3a3a3a;
@@ -388,17 +259,18 @@ body {
   font-family: Nunito, Helvetica, sans-serif;
 }
 
-/* Utility classes for wedding theme */
-.text-wedding-bride-red {
-  @apply text-[#a10129];
-}
+/* ============================================
+   Font Utility Classes (Only Used Ones)
+   ============================================ */
 
+/* USED in WeddingInfor.tsx */
 .barlow-regular {
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+/* USED in EventPlace.tsx */
 .dancing-script-semibold {
   font-family: "Dancing Script", Arial, serif;
   font-optical-sizing: auto;
@@ -406,7 +278,47 @@ body {
   font-style: normal;
 }
 
-/* Responsive improvements */
+/* USED in Countdown.tsx, WeddingInfor.tsx */
+.dancing-regular {
+  font-family: "Dancing Script", Arial, serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} 
+
+/* USED in multiple components */
+.dancing-semibold {
+  font-family: "Dancing Script", Arial, serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* USED in Footer.tsx, Banner.tsx */
+.nunito-regular {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* USED in Footer.tsx, Banner.tsx */
+.nunito-semibold {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* USED in GalleryImage.tsx */
+.text-wedding-bride-red {
+  @apply text-[#a10129];
+}
+
+/* ============================================
+   Responsive Typography
+   ============================================ */
+
 @media (max-width: 640px) {
   html {
     font-size: 14px;
@@ -449,7 +361,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Accessibility: Screen reader only class */
+/* ============================================
+   Accessibility Classes
+   ============================================ */
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -488,6 +403,10 @@ select:focus-visible {
   outline-offset: 2px;
 }
 
+/* ============================================
+   Animations & Effects
+   ============================================ */
+
 /* Image loading shimmer effect */
 @keyframes shimmer {
   0% {
@@ -515,6 +434,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Wedding Date Decoration */
 #wedding-date {
   &::before, &::after {
     content: "";
@@ -539,41 +459,6 @@ body {
     -o-transform: scaleY(-1);
     transform: scaleY(-1);
   }
-}
-
-.nunito-thin {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.nunito-regular {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.nunito-semibold {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.dancing-regular {
-  font-family: "Dancing Script", Arial, serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-} 
-
-.dancing-semibold {
-  font-family: "Dancing Script", Arial, serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
 }
 
 /* Music Icon Spinning Animation */
