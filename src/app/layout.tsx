@@ -1,16 +1,51 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { lazy } from "react";
+import localFont from "next/font/local";
+import { lazy, Suspense } from "react";
 import "./globals.scss";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// Nunito - Variable Font for body text (critical)
+const nunito = localFont({
+  src: "../../public/font/nunito/Nunito-VariableFont_wght.ttf",
+  variable: "--font-nunito",
+  display: "swap",
+  preload: true,
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// Dancing Script - for headings (critical for hero)
+const dancingScript = localFont({
+  src: [
+    {
+      path: "../../public/font/dancing/DancingScript-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/dancing/DancingScript-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/dancing/DancingScript-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/dancing/DancingScript-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-dancing",
+  display: "swap",
+  preload: true,
+});
+
+// Icomoon icon font - optimized with next/font/local
+const icomoon = localFont({
+  src: "../../public/font/icomoon/icomoon.woff",
+  variable: "--font-icomoon",
+  display: "swap",
+  preload: false, // Not critical for initial render
 });
 
 export const metadata: Metadata = {
@@ -38,7 +73,9 @@ export const metadata: Metadata = {
   },
 };
 
-const Footer = lazy(() => import("@/components/Footer").then((mod) => ({ default: mod.Footer })));
+const Footer = lazy(() =>
+  import("@/components/Footer").then((mod) => ({ default: mod.Footer }))
+);
 
 export default function RootLayout({
   children,
@@ -48,47 +85,10 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <head>
-        {/* Preload critical fonts only - fonts used in hero/above-the-fold */}
-        <link
-          rel="preconnect"
-          href="/font/nunito/Nunito-VariableFont_wght.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        {/* Only preload SemiBold - most used weight in hero */}
-        <link
-          rel="preconnect"
-          href="/font/dancing/DancingScript-SemiBold.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/font/dancing/DancingScript-Regular.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/font/dancing/DancingScript-Bold.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        {/* Preconnect for icomoon - non-blocking */}
-        <link
-          rel="preload"
-          href="/font/icomoon/icomoon.woff"
-          as="font"
-          type="font/woff"
-          crossOrigin="anonymous"
-        />
+        {/* Fonts are now managed by next/font/local - no manual preloads needed */}
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
+        className={`${nunito.variable} ${dancingScript.variable} ${icomoon.variable} antialiased bg-white text-gray-900`}
       >
         {/* Skip to main content link for keyboard/screen reader users */}
         <a
@@ -100,7 +100,9 @@ export default function RootLayout({
         <main id="main-content" tabIndex={-1}>
           {children}
         </main>
-        <Footer />
+        <Suspense>
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );

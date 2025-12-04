@@ -1,5 +1,3 @@
-import "@/styles/components/Footer.scss";
-
 export const Footer = () => {
   return (
     <footer id="fh5co-footer" role="contentinfo" className="py-12 bg-[#a10129]">

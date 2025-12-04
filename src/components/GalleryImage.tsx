@@ -1,9 +1,7 @@
 import { shuffle } from "@/hook/useArray";
-import "@/styles/components/OurStory.scss";
 import Image from "next/image";
 import { memo, useCallback, useEffect, useMemo, useState } from "react";
 import { PhotoProvider, PhotoSlider, PhotoView } from "react-photo-view";
-import "react-photo-view/dist/react-photo-view.css";
 
 const galleryImages = [
   { src: "/assets/images/TVL_3905.webp", key: "Ảnh cưới 1" },
@@ -76,7 +74,7 @@ const GalleryItem = memo(
             alt={`${image.key} của Hải Đăng và Bích Phượng`}
             className="object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
             fill
-            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 33vw"
+            sizes="(max-width: 768px) 45vw, (max-width: 1200px) 33vw, 33vw"
             loading={idx < 3 ? "eager" : "lazy"}
           />
         </div>

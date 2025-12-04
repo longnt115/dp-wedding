@@ -1,58 +1,20 @@
-@import "tailwindcss/theme";
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
+// ============================================
+// SCSS files using @use (must be first!)
+// ============================================
+@use "@/styles/sass/style.scss" as *;
+@use "@/styles/icomoon.scss" as *;
+@use "@/styles/components/Footer.scss" as *;
 
-/* Local Font Faces */
-/* Nunito - Variable Font (wght: 200-1000) */
-@font-face {
-  font-family: 'Nunito';
-  src: url('/font/nunito/Nunito-VariableFont_wght.ttf') format('truetype-variations');
-  font-weight: 200 1000;
-  font-style: normal;
-  font-display: swap;
-}
+// ============================================
+// CSS imports (Tailwind & third-party)
+// ============================================
+@use "tailwindcss/theme";
+@use "tailwindcss/preflight";
+@use "tailwindcss/utilities";
+@import "react-photo-view/dist/react-photo-view.css";
 
-/* Dancing Script - Regular (400) */
-@font-face {
-  font-family: 'Dancing Script';
-  src: url('/font/dancing/DancingScript-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Dancing Script - Medium (500) */
-@font-face {
-  font-family: 'Dancing Script';
-  src: url('/font/dancing/DancingScript-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Dancing Script - SemiBold (600) */
-@font-face {
-  font-family: 'Dancing Script';
-  src: url('/font/dancing/DancingScript-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Dancing Script - Bold (700) */
-@font-face {
-  font-family: 'Dancing Script';
-  src: url('/font/dancing/DancingScript-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-// Animation library
-@import "@/styles/icomoon.scss";
-
-// Theme styles (Bootstrap removed - using Tailwind only)
-@import "@/styles/sass/style.scss";
+/* Fonts are now managed by next/font/local in layout.tsx */
+/* CSS Variables: --font-nunito, --font-dancing, --font-icomoon */
 
 /* ============================================
    Bootstrap-like Grid System using Tailwind 4
@@ -272,42 +234,34 @@ body {
 
 /* USED in EventPlace.tsx */
 .dancing-script-semibold {
-  font-family: "Dancing Script", Arial, serif;
-  font-optical-sizing: auto;
+  font-family: var(--font-dancing);
   font-weight: 600;
   font-style: normal;
 }
 
 /* USED in Countdown.tsx, WeddingInfor.tsx */
 .dancing-regular {
-  font-family: "Dancing Script", Arial, serif;
-  font-optical-sizing: auto;
+  font-family: var(--font-dancing);
   font-weight: 400;
   font-style: normal;
 } 
 
 /* USED in multiple components */
 .dancing-semibold {
-  font-family: "Dancing Script", Arial, serif;
-  font-optical-sizing: auto;
+  font-family: var(--font-dancing);
   font-weight: 600;
-  font-style: normal;
 }
 
 /* USED in Footer.tsx, Banner.tsx */
 .nunito-regular {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
+  font-family: var(--font-nunito);
   font-weight: 400;
-  font-style: normal;
 }
 
 /* USED in Footer.tsx, Banner.tsx */
 .nunito-semibold {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
+  font-family: var(--font-nunito);
   font-weight: 600;
-  font-style: normal;
 }
 
 /* USED in GalleryImage.tsx */
@@ -427,6 +381,16 @@ select:focus-visible {
     #f0f0f0 100%
   );
   background-size: 800px 100%;
+}
+
+/* Skeleton shimmer slide effect */
+@keyframes skeleton-shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* Prevent horizontal scroll on mobile */

@@ -2,16 +2,17 @@ import Image from "next/image";
 
 export const GroomBride = () => {
   return (
-    <section 
-      id="fh5co-couple" 
-      aria-labelledby="couple-heading"
-    >
+    <section id="fh5co-couple" aria-labelledby="couple-heading">
       <div className="container">
-        <h2 id="couple-heading" className="sr-only">Thông tin cô dâu chú rể</h2>
-        <div className="row justify-center">
-        </div>
+        <h2 id="couple-heading" className="sr-only">
+          Thông tin cô dâu chú rể
+        </h2>
+        <div className="row justify-center"></div>
         <div className="couple-wrap">
-          <article className="couple-half relative" aria-label="Thông tin chú rể">
+          <article
+            className="couple-half relative"
+            aria-label="Thông tin chú rể"
+          >
             <div className="groom">
               <Image
                 src="/assets/images/groom.webp"
@@ -22,7 +23,9 @@ export const GroomBride = () => {
               />
             </div>
             <div className="desc-groom md:absolute">
-              <h3 className="text-4xl md:text-3xl lg:text-4xl mt-2 md:mt-0">Hải Đăng</h3>
+              <h3 className="text-4xl md:text-3xl lg:text-4xl mt-2 md:mt-0">
+                Hải Đăng
+              </h3>
               <p>
                 Far far away, behind the word mountains, far from the countries
                 Vokalia and Consonantia, there live the blind texts. Separated
@@ -30,12 +33,15 @@ export const GroomBride = () => {
               </p>
             </div>
           </article>
-          
+
           <p className="heart text-center" aria-hidden="true">
             <i className="icon-heart2" aria-hidden="true"></i>
           </p>
-          
-          <article className="couple-half relative" aria-label="Thông tin cô dâu">
+
+          <article
+            className="couple-half relative"
+            aria-label="Thông tin cô dâu"
+          >
             <div className="bride">
               <Image
                 src="/assets/images/bride.webp"
@@ -46,7 +52,9 @@ export const GroomBride = () => {
               />
             </div>
             <div className="desc-bride md:absolute">
-              <h3 className="text-4xl md:text-3xl lg:text-4xl mt-2 md:mt-0">Bích Phượng</h3>
+              <h3 className="text-4xl md:text-3xl lg:text-4xl mt-2 md:mt-0">
+                Bích Phượng
+              </h3>
               <p>
                 Far far away, behind the word mountains, far from the countries
                 Vokalia and Consonantia, there live the blind texts. Separated

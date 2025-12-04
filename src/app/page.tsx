@@ -4,6 +4,7 @@ import Banner from "@/components/Banner";
 import { Loader } from "@/components/common/Loader";
 import { EventPlace } from "@/components/EventPlace";
 import { GroomBride } from "@/components/GroomBride";
+import GalleryLoader from "@/components/skeleton/GalleryLoader";
 import { WeddingInfor } from "@/components/WeddingInfor";
 import { lazy, Suspense } from "react";
 
@@ -33,7 +34,11 @@ export default function Home() {
         <GroomBride />
         <WeddingInfor />
         <EventPlace />
+      </Suspense>
+      <Suspense fallback={<GalleryLoader />}>
         <GalleryImage />
+      </Suspense>
+      <Suspense fallback={null}>
         <BackgroundMusic />
         <HeartRain />
       </Suspense>

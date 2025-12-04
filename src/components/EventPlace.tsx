@@ -40,6 +40,7 @@ export const EventPlace = () => {
                 alt="Ảnh cưới của Hải Đăng và Bích Phượng tại địa điểm tổ chức"
                 className="w-[18.5rem] md:w-[21.5rem] h-[30rem] md:h-[34rem] object-cover p-3 border-1 border-[#a10129] shadow-lg mx-auto block"
                 loading="lazy"
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 33vw"
               />
             </div>
           </div>
@@ -83,7 +84,7 @@ export const EventPlace = () => {
                       className="w-full h-full bg-gray-100 rounded-lg shadow-lg flex items-center justify-center"
                       aria-label="Đang tải bản đồ..."
                     >
-                      <span className="text-gray-500">Đang tải bản đồ...</span>
+                      <span className="text-gray-600">Đang tải bản đồ...</span>
                     </div>
                   )}
                 </div>

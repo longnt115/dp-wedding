@@ -1,6 +1,6 @@
-/* Optimized icomoon - only icon-heart2 is used */
+/* Optimized icomoon - using next/font/local via CSS variable */
 .icon-heart2 {
-  font-family: 'icomoon' !important;
+  font-family: var(--font-icomoon), 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -15,13 +15,10 @@
   content: "\e9b5";
 }
 
+/* Fallback @font-face for cases where CSS variable is not available */
 @font-face {
   font-family: 'icomoon';
-  src:  url('/fonts/icomoon/icomoon.eot?6iuir');
-  src:  url('/fonts/icomoon/icomoon.eot?6iuir#iefix') format('embedded-opentype'),
-    url('/fonts/icomoon/icomoon.ttf?6iuir') format('truetype'),
-    url('/fonts/icomoon/icomoon.woff?6iuir') format('woff'),
-    url('/fonts/icomoon/icomoon.svg?6iuir#icomoon') format('svg');
+  src: url('/font/icomoon/icomoon.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
