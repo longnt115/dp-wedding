@@ -1,6 +1,5 @@
+"use client";
 import { shuffle } from "@/hook/useArray";
-import { checkMobile } from "@/hook/useDevice";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { memo, useCallback, useEffect, useMemo, useState } from "react";
 import { PhotoProvider, PhotoSlider, PhotoView } from "react-photo-view";
@@ -55,93 +54,34 @@ const GalleryItem = memo(
     idx,
     masonryClass,
     onKeyDown,
-    isMobile,
   }: {
     image: { src: string; key: string };
     idx: number;
     masonryClass: string;
     onKeyDown: (e: React.KeyboardEvent, idx: number) => void;
-    isMobile: boolean;
-  }) => {
-    // Animation variants cho desktop (3 cột)
-    const getDesktopVariants = (index: number) => {
-      const col = index % 3; // 0: trái, 1: giữa, 2: phải
-      if (col === 0) {
-        // Ảnh trái - từ trái qua
-        return {
-          hidden: { opacity: 0, x: -100 },
-          visible: { opacity: 1, x: 0 },
-        };
-      } else if (col === 1) {
-        // Ảnh giữa - từ dưới lên
-        return {
-          hidden: { opacity: 0, y: 100 },
-          visible: { opacity: 1, y: 0 },
-        };
-      } else {
-        // Ảnh phải - từ phải qua
-        return {
-          hidden: { opacity: 0, x: 100 },
-          visible: { opacity: 1, x: 0 },
-        };
-      }
-    };
-
-    // Animation variants cho mobile (2 cột)
-    const getMobileVariants = (index: number) => {
-      const col = index % 2; // 0: trái, 1: phải
-      if (col === 0) {
-        // Ảnh trái - từ trái qua
-        return {
-          hidden: { opacity: 0, x: -100 },
-          visible: { opacity: 1, x: 0 },
-        };
-      } else {
-        // Ảnh phải - từ phải qua
-        return {
-          hidden: { opacity: 0, x: 100 },
-          visible: { opacity: 1, x: 0 },
-        };
-      }
-    };
-
-    const variants = isMobile
-      ? getMobileVariants(idx)
-      : getDesktopVariants(idx);
-
-    return (
-      <PhotoView src={image.src} key={idx}>
-        {idx < 9 ? (
-          <motion.div
-            className={`relative overflow-hidden group ${masonryClass}`}
-            data-animate-effect="fadeIn"
-            role="listitem"
-            tabIndex={0}
-            onKeyDown={(e) => onKeyDown(e, idx)}
-            aria-label={`${image.key} - Nhấn Enter để xem ảnh lớn`}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={variants}
-            transition={{
-              duration: 1.5,
-              ease: "easeOut",
-              delay: (idx % 3) * 0.1,
-            }}
-          >
-            <Image
-              src={image.src}
-              alt={`${image.key} của Hải Đăng và Bích Phượng`}
-              className="object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
-              fill
-              sizes="(max-width: 768px) 45vw, (max-width: 1200px) 33vw, 32vw"
-              loading={idx < 3 ? "eager" : "lazy"}
-            />
-          </motion.div>
-        ) : undefined}
-      </PhotoView>
-    );
-  }
+  }) => (
+    <PhotoView src={image.src} key={idx}>
+      {idx < 9 ? (
+        <div
+          className={`relative overflow-hidden group ${masonryClass}`}
+          data-animate-effect="fadeIn"
+          role="listitem"
+          tabIndex={0}
+          onKeyDown={(e) => onKeyDown(e, idx)}
+          aria-label={`${image.key} - Nhấn Enter để xem ảnh lớn`}
+        >
+          <Image
+            src={image.src}
+            alt={`${image.key} của Hải Đăng và Bích Phượng`}
+            className="object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
+            fill
+            sizes="(max-width: 768px) 45vw, (max-width: 1200px) 30vw, 30vw"
+            loading={idx < 3 ? "eager" : "lazy"}
+          />
+        </div>
+      ) : undefined}
+    </PhotoView>
+  )
 );
 
 GalleryItem.displayName = "GalleryItem";
@@ -156,6 +96,18 @@ export const GalleryImage = () => {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
 
   useEffect(() => {
+    // Check device type một lần khi mount - tránh import top-level blocking
+    const checkMobile = () => {
+      const userAgent = navigator.userAgent.toLowerCase();
+      const isMobile =
+        /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
+          userAgent
+        );
+      const isTablet =
+        /(ipad|tablet|playbook|silk)|(android(?!.*mobile))/i.test(userAgent);
+      return isMobile || isTablet || window.innerWidth < 768;
+    };
+
     setIsMobileDevice(checkMobile());
     setDisplayGalleryImages(shuffle(galleryImages));
   }, []);
@@ -209,7 +161,7 @@ export const GalleryImage = () => {
               Album Hình Cưới
             </h2>
             <span
-              className="h-[2px] w-20 md:w-25 bg-wedding-primary block mb-2 md:mb-5 mx-auto"
+              className="h-[2px] w-20 md:w-25 bg-[#a10129] block mb-2 md:mb-5 mx-auto"
               aria-hidden="true"
             ></span>
             <p>
@@ -234,13 +186,12 @@ export const GalleryImage = () => {
                     idx={idx}
                     masonryClass={getMasonryClass(idx)}
                     onKeyDown={handleKeyDown}
-                    isMobile={isMobileDevice}
                   />
                 ))}
               </div>
               <div className="text-center">
                 <button
-                  className="mt-5 !rounded-full btn !border-1 !border-wedding-primary bg-white text-wedding-primary hover:!bg-wedding-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-wedding-primary focus:ring-offset-2"
+                  className="mt-5 !rounded-full btn !border-1 !border-[#a10129] bg-white text-[#a10129] hover:!bg-[#a10129] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#a10129] focus:ring-offset-2"
                   onClick={handleOpenGallery}
                   aria-label={`Xem tất cả ${displayGalleryImages.length} ảnh trong album`}
                 >

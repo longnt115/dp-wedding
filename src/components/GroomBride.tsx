@@ -29,7 +29,7 @@ export const GroomBride = () => {
           </p>
 
           <article
-            className="couple-half relative mt-10 lg:mt-0"
+            className="couple-half relative mt-10 md:mt-0"
             aria-label="Thông tin cô dâu"
           >
             <div className="bride">
@@ -57,7 +57,7 @@ export const GroomBride = () => {
           <h3 className="dancing-semibold flex flex-row items-center col-12 w-full">
             <div className="couple-half flex flex-col justify-center items-center">
               <div className="groom !border-0">
-                <span className="nunito-regular text-lg sm:text-xl md:text-2xl">
+                <span className="nunito-regular text-lg sm:text-xl md:text-3xl lg:text-4xl">
                   Chủ Rể
                 </span>
                 <p className="text-4xl md:text-5xl lg:text-6xl text-wedding-primary">
@@ -67,7 +67,7 @@ export const GroomBride = () => {
             </div>
             <div className="couple-half flex flex-col justify-center items-center">
               <div className="bride !border-0 w-full">
-                <span className="nunito-regular text-lg sm:text-xl md:text-2xl">
+                <span className="nunito-regular text-lg sm:text-xl md:text-3xl lg:text-4xl">
                   Cô Dâu
                 </span>
                 <p className="text-4xl md:text-5xl lg:text-6xl text-wedding-primary">

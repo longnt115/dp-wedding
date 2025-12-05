@@ -1,3 +1,4 @@
+"use client";
 import type { Heart } from "@/types";
 import Image from "next/image";
 import { memo, useCallback, useEffect, useRef, useState } from "react";

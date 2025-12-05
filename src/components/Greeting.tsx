@@ -1,3 +1,4 @@
+"use client";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -37,7 +38,7 @@ export const Greeting = () => {
         <div className="col-12 text-3xl mb-5 lg:text-5xl">
           Trân Trọng Kính Mời
         </div>
-        <div className="col-12 text-5xl lg:text-7xl dancing-thin underline decoration-dotted">
+        <div className="col-12 text-5xl lg:text-7xl dancing-thin underline decoration-dotted underline-offset-14 lg:underline-offset-16">
           {guestName}
         </div>
       </div>

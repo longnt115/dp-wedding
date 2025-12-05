@@ -1,10 +1,6 @@
-"use client";
-
 import Banner from "@/components/Banner";
 import { Loader } from "@/components/common/Loader";
 import { EventPlace } from "@/components/EventPlace";
-import { Greeting } from "@/components/Greeting";
-import { GroomBride } from "@/components/GroomBride";
 import GalleryLoader from "@/components/skeleton/GalleryLoader";
 import { WeddingInfor } from "@/components/WeddingInfor";
 import { lazy, Suspense } from "react";
@@ -27,6 +23,13 @@ const BackgroundMusic = lazy(() =>
   }))
 );
 
+const Greeting = lazy(() =>
+  import("@/components/Greeting").then((mod) => ({ default: mod.Greeting }))
+);
+const GroomBride = lazy(() =>
+  import("@/components/GroomBride").then((mod) => ({ default: mod.GroomBride }))
+);
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -34,6 +37,8 @@ export default function Home() {
         <Banner />
         <Greeting />
         <GroomBride />
+      </Suspense>
+      <Suspense fallback={null}>
         <WeddingInfor />
         <EventPlace />
       </Suspense>
