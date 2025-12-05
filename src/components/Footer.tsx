@@ -1,6 +1,10 @@
 export const Footer = () => {
   return (
-    <footer id="fh5co-footer" role="contentinfo" className="py-12 bg-[#a10129]">
+    <footer
+      id="fh5co-footer"
+      role="contentinfo"
+      className="py-12 bg-wedding-primary"
+    >
       <div className="container">
         <div className="row copyright">
           <div className="col-md-12 text-center">

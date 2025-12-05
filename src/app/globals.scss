@@ -214,6 +214,11 @@
   --color-wedding-gold: #d4af37;
   --color-wedding-gray: #4a4a4a;
   --color-wedding-gold-light: #c9a961;
+  
+  /* Wedding Primary Colors - Đỏ đô truyền thống */
+  --color-wedding-primary: #a10129;
+  --color-wedding-primary-light: #c41d47;
+  --color-wedding-primary-dark: #7a0120;
 }
 
 body {
@@ -225,19 +230,12 @@ body {
    Font Utility Classes (Only Used Ones)
    ============================================ */
 
-/* USED in WeddingInfor.tsx */
-.barlow-regular {
-  font-family: "Barlow", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* USED in EventPlace.tsx */
-.dancing-script-semibold {
+/* USED in Countdown.tsx, WeddingInfor.tsx */
+.dancing-thin {
   font-family: var(--font-dancing);
-  font-weight: 600;
+  font-weight: 100;
   font-style: normal;
-}
+} 
 
 /* USED in Countdown.tsx, WeddingInfor.tsx */
 .dancing-regular {
@@ -266,7 +264,7 @@ body {
 
 /* USED in GalleryImage.tsx */
 .text-wedding-bride-red {
-  @apply text-[#a10129];
+  @apply text-wedding-primary;
 }
 
 /* ============================================

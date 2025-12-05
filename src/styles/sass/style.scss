@@ -259,7 +259,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	
 	@media screen and (max-width: $screen-sm) {
 		height: inherit;
-		padding: 7em 0;
+		padding: 6em 0;
 		.display-t,
 		.display-tc {
 			height: inherit;
@@ -453,7 +453,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-couple,
 #fh5co-gallery,
 .fh5co-section {
-	padding: 7em 0;
+	padding: 6em 0;
 	clear: both;
 	@media screen and (max-width: $screen-sm) {
 		padding: 3em 0;
@@ -481,17 +481,17 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .heart{
-	position: absolute;
-	top: 4em;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 99;
 	animation: pulse 1s ease infinite;
+	z-index: 99;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
 	
 	i{
-		font-size: 20px;
+		font-size: 25px;
 		background: $brand-white;
-		padding: 20px;
+		padding: 25px;
 		color: $brand-primary;
 		@include border-radius(50%);
 	}
@@ -523,26 +523,9 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	
 	.groom, .bride{
-		@include border-radius(50%);
-		width: 150px;
-		height: 150px;
+		padding: 10px;
+		border: 1px solid var(--color-bride-red);
 		flex-shrink: 0;
-		
-		img{
-			width: 150px;
-			height: 150px;
-			@include border-radius(50%);
-			object-fit: cover;
-		}
-		
-		@media screen and (max-width: $screen-xs){
-			width: 120px;
-			height: 120px;
-			img{
-				width: 120px;
-				height: 120px;
-			}
-		}
 	}
 	
 	// Groom section - align right

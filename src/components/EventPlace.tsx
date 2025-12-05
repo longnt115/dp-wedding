@@ -38,7 +38,7 @@ export const EventPlace = () => {
                 height={296}
                 width={480}
                 alt="Ảnh cưới của Hải Đăng và Bích Phượng tại địa điểm tổ chức"
-                className="w-[18.5rem] md:w-[21.5rem] h-[30rem] md:h-[34rem] object-cover p-3 border-1 border-[#a10129] shadow-lg mx-auto block"
+                className="w-[18.5rem] md:w-[21.5rem] h-[30rem] md:h-[34rem] object-cover p-3 border-1 border-wedding-primary shadow-lg mx-auto block"
                 loading="lazy"
                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 33vw"
               />
@@ -48,12 +48,12 @@ export const EventPlace = () => {
             <div className="text-center flex flex-col h-full justify-center items-center">
               <h2
                 id="venue-heading"
-                className="text-[#a10129] dancing-script-semibold text-[2.5rem] md:text-[3.75rem] mb-0 sm:mb-[10px] md:mb-5"
+                className="text-wedding-primary dancing-semibold text-[2.5rem] md:text-[3.75rem] mb-0 sm:mb-[10px] md:mb-5"
               >
                 Địa Điểm Tổ Chức
               </h2>
               <span
-                className="h-[2px] w-20 md:w-25 bg-[#a10129] block mb-2 md:mb-5 mx-auto sm:mb-[10px]"
+                className="h-[2px] w-20 md:w-25 bg-wedding-primary block mb-2 md:mb-5 mx-auto sm:mb-[10px]"
                 aria-hidden="true"
               ></span>
               <address className="not-italic">

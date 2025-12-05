@@ -3,6 +3,7 @@
 import Banner from "@/components/Banner";
 import { Loader } from "@/components/common/Loader";
 import { EventPlace } from "@/components/EventPlace";
+import { Greeting } from "@/components/Greeting";
 import { GroomBride } from "@/components/GroomBride";
 import GalleryLoader from "@/components/skeleton/GalleryLoader";
 import { WeddingInfor } from "@/components/WeddingInfor";
@@ -31,6 +32,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Suspense fallback={<Loader />}>
         <Banner />
+        <Greeting />
         <GroomBride />
         <WeddingInfor />
         <EventPlace />

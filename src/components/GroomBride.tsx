@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export const GroomBride = () => {
   return (
-    <section id="fh5co-couple" aria-labelledby="couple-heading">
+    <section
+      id="fh5co-couple"
+      aria-labelledby="couple-heading"
+      className="!mt-0"
+    >
       <div className="container">
-        <h2 id="couple-heading" className="sr-only">
-          Thông tin cô dâu chú rể
-        </h2>
-        <div className="row justify-center"></div>
-        <div className="couple-wrap">
+        <div className="couple-wrap mb-[3em] md:mb-[6em]">
           <article
             className="couple-half relative"
             aria-label="Thông tin chú rể"
@@ -17,20 +17,10 @@ export const GroomBride = () => {
               <Image
                 src="/assets/images/groom.webp"
                 alt="Chú rể Hải Đăng"
-                width={150}
-                height={150}
-                className="img-responsive"
+                width={320}
+                height={320}
+                className="w-full img-responsive"
               />
-            </div>
-            <div className="desc-groom md:absolute">
-              <h3 className="text-4xl md:text-3xl lg:text-4xl mt-2 md:mt-0">
-                Hải Đăng
-              </h3>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove
-              </p>
             </div>
           </article>
 
@@ -39,29 +29,53 @@ export const GroomBride = () => {
           </p>
 
           <article
-            className="couple-half relative"
+            className="couple-half relative mt-10 lg:mt-0"
             aria-label="Thông tin cô dâu"
           >
             <div className="bride">
               <Image
                 src="/assets/images/bride.webp"
                 alt="Cô dâu Bích Phượng"
-                width={150}
-                height={150}
-                className="img-responsive"
+                width={320}
+                height={320}
+                className="w-full img-responsive"
               />
             </div>
-            <div className="desc-bride md:absolute">
-              <h3 className="text-4xl md:text-3xl lg:text-4xl mt-2 md:mt-0">
-                Bích Phượng
-              </h3>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove
-              </p>
-            </div>
           </article>
+        </div>
+        <div className="row justify-center flex flex-col items-center">
+          <h2
+            id="venue-heading"
+            className="nunito-semibold text-4xl md:text-5xl col-12 mb-5"
+          >
+            Nhà Có Hỷ
+          </h2>
+          <span
+            className="h-[2px] w-20 md:w-25 bg-black block mb-2 md:mb-5 mx-auto"
+            aria-hidden="true"
+          ></span>
+          <h3 className="dancing-semibold flex flex-row items-center col-12 w-full">
+            <div className="couple-half flex flex-col justify-center items-center">
+              <div className="groom !border-0">
+                <span className="nunito-regular text-lg sm:text-xl md:text-2xl">
+                  Chủ Rể
+                </span>
+                <p className="text-4xl md:text-5xl lg:text-6xl text-wedding-primary">
+                  Hải Đăng
+                </p>
+              </div>
+            </div>
+            <div className="couple-half flex flex-col justify-center items-center">
+              <div className="bride !border-0 w-full">
+                <span className="nunito-regular text-lg sm:text-xl md:text-2xl">
+                  Cô Dâu
+                </span>
+                <p className="text-4xl md:text-5xl lg:text-6xl text-wedding-primary">
+                  Bích Phượng
+                </p>
+              </div>
+            </div>
+          </h3>
         </div>
       </div>
     </section>

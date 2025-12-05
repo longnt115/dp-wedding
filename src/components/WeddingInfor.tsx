@@ -49,7 +49,7 @@ export const WeddingInfor = () => {
                     viewport={{ once: true }}
                   >
                     <div className="text-wedding-gray900 mb-2">
-                      <p className="text-base sm:text-lg md:text-xl barlow-regular flex flex-col">
+                      <p className="text-base sm:text-lg md:text-xl flex flex-col">
                         <span className="font-semibold">
                           <time dateTime="2025-12-27T11:00:00">
                             11h00{" "}

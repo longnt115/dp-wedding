@@ -10,7 +10,12 @@ const config: Config = {
     extend: {
       colors: {
         wedding: {
-          // Primary colors
+          // Primary colors - Đỏ đô truyền thống
+          primary: "#a10129",
+          "primary-light": "#c41d47",
+          "primary-dark": "#7a0120",
+
+          // Neutral colors
           dark: "#3a3a3a",
           light: "#f5f5f5",
           white: "#ffffff",
