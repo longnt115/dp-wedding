@@ -2,24 +2,21 @@
 import { shuffle } from "@/hook/useArray";
 import Image from "next/image";
 import { memo, useCallback, useEffect, useMemo, useState } from "react";
-import { PhotoProvider, PhotoSlider, PhotoView } from "react-photo-view";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const galleryImages = [
   { src: "/assets/images/TVL_3905.webp", key: "Ảnh cưới 1" },
   { src: "/assets/images/TVL_4627.webp", key: "Ảnh cưới 2" },
   { src: "/assets/images/TVL_4688.webp", key: "Ảnh cưới 3" },
-  { src: "/assets/images/TVL_4853.webp", key: "Ảnh cưới 4" },
-  { src: "/assets/images/TVL_4882.webp", key: "Ảnh cưới 5" },
-  { src: "/assets/images/TVL_4905.webp", key: "Ảnh cưới 6" },
   { src: "/assets/images/TVL_4917.webp", key: "Ảnh cưới 7" },
   { src: "/assets/images/TVL_5175.webp", key: "Ảnh cưới 8" },
   { src: "/assets/images/TVL_5525.webp", key: "Ảnh cưới 9" },
-  { src: "/assets/images/TVL_5585.webp", key: "Ảnh cưới 10" },
+  { src: "/assets/images/TVL_5585.webp", key: "Ảnh cưới 4" },
   { src: "/assets/images/TVL_6136.webp", key: "Ảnh cưới 11" },
   { src: "/assets/images/TVL_6520.webp", key: "Ảnh cưới 13" },
-  { src: "/assets/images/TVL_6589.webp", key: "Ảnh cưới 15" },
   { src: "/assets/images/TVL_6745.webp", key: "Ảnh cưới 16" },
   { src: "/assets/images/TVL_6883.webp", key: "Ảnh cưới 17" },
+  { src: "/assets/images/TVL_6262.webp", key: "Ảnh cưới 17" },
 ];
 
 // Pattern được định nghĩa ngoài component - tránh recreate
@@ -33,6 +30,9 @@ const MOBILE_PATTERN = [
   "row-span-4",
   "row-span-4",
   "row-span-3",
+  "row-span-3",
+  "row-span-3",
+  "row-span-3",
 ];
 
 const DESKTOP_PATTERN = [
@@ -43,6 +43,9 @@ const DESKTOP_PATTERN = [
   "row-span-4",
   "row-span-4",
   "row-span-5",
+  "row-span-4",
+  "row-span-4",
+  "row-span-4",
   "row-span-4",
   "row-span-4",
 ];
@@ -61,25 +64,23 @@ const GalleryItem = memo(
     onKeyDown: (e: React.KeyboardEvent, idx: number) => void;
   }) => (
     <PhotoView src={image.src} key={idx}>
-      {idx < 9 ? (
-        <div
-          className={`relative overflow-hidden group ${masonryClass}`}
-          data-animate-effect="fadeIn"
-          role="listitem"
-          tabIndex={0}
-          onKeyDown={(e) => onKeyDown(e, idx)}
-          aria-label={`${image.key} - Nhấn Enter để xem ảnh lớn`}
-        >
-          <Image
-            src={image.src}
-            alt={`${image.key} của Hải Đăng và Bích Phượng`}
-            className="object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
-            fill
-            sizes="(max-width: 768px) 45vw, (max-width: 1200px) 30vw, 30vw"
-            loading={idx < 3 ? "eager" : "lazy"}
-          />
-        </div>
-      ) : undefined}
+      <div
+        className={`relative overflow-hidden group ${masonryClass}`}
+        data-animate-effect="fadeIn"
+        role="listitem"
+        tabIndex={0}
+        onKeyDown={(e) => onKeyDown(e, idx)}
+        aria-label={`${image.key} - Nhấn Enter để xem ảnh lớn`}
+      >
+        <Image
+          src={image.src}
+          alt={`${image.key} của Hải Đăng và Bích Phượng`}
+          className="object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
+          fill
+          sizes="(max-width: 768px) 45vw, (max-width: 1200px) 30vw, 30vw"
+          loading={idx < 3 ? "eager" : "lazy"}
+        />
+      </div>
     </PhotoView>
   )
 );
@@ -90,8 +91,6 @@ export const GalleryImage = () => {
   const [displayGalleryImages, setDisplayGalleryImages] = useState<
     typeof galleryImages
   >([]);
-  const [index, setIndex] = useState(0);
-  const [visible, setVisible] = useState(false);
   // Sử dụng state thay vì import trực tiếp để check một lần khi mount
   const [isMobileDevice, setIsMobileDevice] = useState(false);
 
@@ -124,21 +123,21 @@ export const GalleryImage = () => {
     [currentPattern]
   );
 
-  const handleOpenGallery = useCallback(() => {
-    setVisible(true);
-  }, []);
+  // const handleOpenGallery = useCallback(() => {
+  //   setVisible(true);
+  // }, []);
 
-  const handleCloseGallery = useCallback(() => {
-    setVisible(false);
-    setIndex(0);
-  }, []);
+  // const handleCloseGallery = useCallback(() => {
+  //   setVisible(false);
+  //   setIndex(0);
+  // }, []);
 
   const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent, imageIndex: number) => {
+    (e: React.KeyboardEvent) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        setIndex(imageIndex);
-        setVisible(true);
+        // setIndex(imageIndex);
+        // setVisible(true);
       }
     },
     []
@@ -171,7 +170,7 @@ export const GalleryImage = () => {
           </div>
         </div>
         <div className="row row-bottom-padded-md flex justify-center">
-          <div className="col-md-12">
+          <div className="col-base-12 col-md-12">
             <PhotoProvider>
               <div
                 id="fh5co-gallery-list"
@@ -189,7 +188,7 @@ export const GalleryImage = () => {
                   />
                 ))}
               </div>
-              <div className="text-center">
+              {/* <div className="text-center">
                 <button
                   className="mt-5 !rounded-full btn !border-1 !border-[#a10129] bg-white text-[#a10129] hover:!bg-[#a10129] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#a10129] focus:ring-offset-2"
                   onClick={handleOpenGallery}
@@ -204,7 +203,7 @@ export const GalleryImage = () => {
                   index={index}
                   onIndexChange={setIndex}
                 />
-              </div>
+              </div> */}
             </PhotoProvider>
           </div>
         </div>

@@ -7,7 +7,7 @@ export const Footer = () => {
     >
       <div className="container">
         <div className="row copyright">
-          <div className="col-md-12 text-center">
+          <div className="col-base-12 text-center">
             <div className="mb-0 text-white wd-footer-content relative w-fit mx-auto px-15">
               <small className="block text-2xl leading-[0.4] nunito-semibold">
                 Hải Đăng{" "}

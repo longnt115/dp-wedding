@@ -32,7 +32,7 @@ export const EventPlace = () => {
     >
       <div className="container">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-base-12 col-md-6">
             <div className="p-1 flex">
               <Image
                 src="/assets/images/TVL_6565.webp"
@@ -45,7 +45,7 @@ export const EventPlace = () => {
               />
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-base-12 col-md-6">
             <div className="text-center flex flex-col h-full justify-center items-center">
               <h2
                 id="venue-heading"
@@ -57,7 +57,7 @@ export const EventPlace = () => {
                 className="h-[2px] w-20 md:w-25 bg-wedding-primary block mb-2 md:mb-5 mx-auto sm:mb-[10px]"
                 aria-hidden="true"
               ></span>
-              <address className="not-italic">
+              <address className="not-italic mt-2 md:mt-0">
                 <h3 className="text-[1.25rem] mb-5 leading-none">
                   Trung Tâm Tiệc Cưới &amp; Sự Kiện Promes Center <br />
                   <span className="text-[1rem] dancing-thin text-gray-600">

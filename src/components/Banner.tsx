@@ -21,7 +21,7 @@ export default function Banner() {
       <div className="overlay" aria-hidden="true"></div>
       <div className="container relative z-10">
         <div className="row">
-          <div className="col-md-10 col-md-offset-1 text-center">
+          <div className="col-base-12 col-md-10 col-md-offset-1 text-center">
             <div className="display-t nunito-semibold">
               <div className="display-tc" data-animate-effect="fadeIn">
                 <h1 className="!mt-[25vh] sm:!text-[70px] md:!text-[75px] text-[100px]">

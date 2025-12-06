@@ -489,9 +489,9 @@ h1, h2, h3, h4, h5, h6, figure {
     transform: translateX(-50%);
 	
 	i{
-		font-size: 25px;
+		font-size: 20px;
 		background: $brand-white;
-		padding: 25px;
+		padding: 22px;
 		color: $brand-primary;
 		@include border-radius(50%);
 	}

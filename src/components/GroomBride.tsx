@@ -46,7 +46,7 @@ export const GroomBride = () => {
         <div className="row justify-center flex flex-col items-center">
           <h2
             id="venue-heading"
-            className="nunito-semibold text-4xl md:text-5xl col-12 mb-5"
+            className="nunito-semibold text-4xl md:text-5xl col-base-12 mb-5 text-center"
           >
             Nhà Có Hỷ
           </h2>
@@ -54,13 +54,13 @@ export const GroomBride = () => {
             className="h-[2px] w-20 md:w-25 bg-black block mb-2 md:mb-5 mx-auto"
             aria-hidden="true"
           ></span>
-          <h3 className="dancing-semibold flex flex-row items-center col-12 w-full">
+          <h3 className="dancing-semibold flex flex-row items-center col-base-12 w-full">
             <div className="couple-half flex flex-col justify-center items-center">
               <div className="groom !border-0">
                 <span className="nunito-regular text-lg sm:text-xl md:text-3xl lg:text-4xl">
                   Chủ Rể
                 </span>
-                <p className="text-4xl md:text-5xl lg:text-6xl text-wedding-primary">
+                <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-wedding-primary">
                   Hải Đăng
                 </p>
               </div>
@@ -70,7 +70,7 @@ export const GroomBride = () => {
                 <span className="nunito-regular text-lg sm:text-xl md:text-3xl lg:text-4xl">
                   Cô Dâu
                 </span>
-                <p className="text-4xl md:text-5xl lg:text-6xl text-wedding-primary">
+                <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-wedding-primary">
                   Bích Phượng
                 </p>
               </div>

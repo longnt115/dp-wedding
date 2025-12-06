@@ -56,7 +56,7 @@ export default function HeartRain() {
       setHearts((prev) => {
         const newHearts = [...prev, createHeart()];
         // Giữ tối đa 4 hearts để giảm DOM nodes
-        return newHearts.slice(-4);
+        return newHearts.slice(-7);
       });
     }
     requestRef.current = requestAnimationFrame(animate);
