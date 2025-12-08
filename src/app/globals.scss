@@ -17,6 +17,11 @@
 /* CSS Variables: --font-nunito, --font-dancing, --font-icomoon */
 
 /* ============================================
+   Custom Breakpoints for Tailwind v4
+   ============================================ */
+@custom-media --xxs (min-width: 321px);
+
+/* ============================================
    Bootstrap-like Grid System using Tailwind 4
    ============================================ */
 

@@ -1,6 +1,5 @@
-const userAgent = navigator.userAgent.toLowerCase();
 
-export const checkMobile = () => {
+export const checkMobile = (userAgent: string) => {
   const isMobile =
     /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
       userAgent

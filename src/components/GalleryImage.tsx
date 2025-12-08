@@ -1,5 +1,6 @@
 "use client";
 import { shuffle } from "@/hook/useArray";
+import { checkMobile } from "@/hook/useDevice";
 import Image from "next/image";
 import { memo, useCallback, useEffect, useState } from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
@@ -92,21 +93,10 @@ export const GalleryImage = () => {
   >([]);
   // Sử dụng state thay vì import trực tiếp để check một lần khi mount
   const [isMobileDevice, setIsMobileDevice] = useState(false);
-
+  
   useEffect(() => {
-    // Check device type một lần khi mount - tránh import top-level blocking
-    const checkMobile = () => {
-      const userAgent = navigator.userAgent.toLowerCase();
-      const isMobile =
-        /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
-          userAgent
-        );
-      const isTablet =
-        /(ipad|tablet|playbook|silk)|(android(?!.*mobile))/i.test(userAgent);
-      return isMobile || isTablet || window.innerWidth < 768;
-    };
-
-    setIsMobileDevice(checkMobile());
+    const userAgent = navigator.userAgent.toLowerCase();
+    setIsMobileDevice(checkMobile(userAgent));
     const displayImages = shuffle(galleryImages).slice(
       0,
       isMobileDevice ? 11 : 12

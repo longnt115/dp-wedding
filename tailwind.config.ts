@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xxs': '321px', // For screens larger than 320px
+      },
       colors: {
         wedding: {
           // Primary colors - Đỏ đô truyền thống
