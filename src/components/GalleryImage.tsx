@@ -1,15 +1,15 @@
 "use client";
 import { shuffle } from "@/hook/useArray";
 import Image from "next/image";
-import { memo, useCallback, useEffect, useMemo, useState } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const galleryImages = [
-  { src: "/assets/images/TVL_3905.webp", key: "Ảnh cưới 1" },
+  { src: "/assets/images/TVL_4023.webp", key: "Ảnh cưới 1" },
   { src: "/assets/images/TVL_4627.webp", key: "Ảnh cưới 2" },
   { src: "/assets/images/TVL_4688.webp", key: "Ảnh cưới 3" },
   { src: "/assets/images/TVL_4917.webp", key: "Ảnh cưới 7" },
-  { src: "/assets/images/TVL_5175.webp", key: "Ảnh cưới 8" },
+  { src: "/assets/images/TVL_5101.webp", key: "Ảnh cưới 8" },
   { src: "/assets/images/TVL_5525.webp", key: "Ảnh cưới 9" },
   { src: "/assets/images/TVL_5585.webp", key: "Ảnh cưới 4" },
   { src: "/assets/images/TVL_6136.webp", key: "Ảnh cưới 11" },
@@ -28,11 +28,10 @@ const MOBILE_PATTERN = [
   "row-span-3",
   "row-span-4",
   "row-span-4",
+  "row-span-3",
   "row-span-4",
   "row-span-3",
-  "row-span-3",
-  "row-span-3",
-  "row-span-3",
+  "row-span-5",
 ];
 
 const DESKTOP_PATTERN = [
@@ -108,19 +107,18 @@ export const GalleryImage = () => {
     };
 
     setIsMobileDevice(checkMobile());
-    setDisplayGalleryImages(shuffle(galleryImages));
+    const displayImages = shuffle(galleryImages).slice(
+      0,
+      isMobileDevice ? 11 : 12
+    );
+    setDisplayGalleryImages(displayImages);
   }, []);
-
-  // Memoize pattern để tránh tính toán lại
-  const currentPattern = useMemo(
-    () => (isMobileDevice ? MOBILE_PATTERN : DESKTOP_PATTERN),
-    [isMobileDevice]
-  );
 
   // Memoize getMasonryClass
   const getMasonryClass = useCallback(
-    (idx: number) => currentPattern[idx % 9],
-    [currentPattern]
+    (idx: number) =>
+      isMobileDevice ? MOBILE_PATTERN[idx % 11] : DESKTOP_PATTERN[idx % 12],
+    [isMobileDevice]
   );
 
   // const handleOpenGallery = useCallback(() => {
@@ -132,16 +130,13 @@ export const GalleryImage = () => {
   //   setIndex(0);
   // }, []);
 
-  const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        // setIndex(imageIndex);
-        // setVisible(true);
-      }
-    },
-    []
-  );
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      // setIndex(imageIndex);
+      // setVisible(true);
+    }
+  }, []);
 
   return (
     <section

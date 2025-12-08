@@ -24,21 +24,21 @@ export default function Banner() {
           <div className="col-base-12 col-md-10 col-md-offset-1 text-center">
             <div className="display-t nunito-semibold">
               <div className="display-tc" data-animate-effect="fadeIn">
-                <h1 className="!mt-[25vh] sm:!text-[70px] md:!text-[75px] text-[100px]">
+                <h1 className="mt-[20vh] sm:mt-[22vh] md:mt-[25vh] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[100px] leading-tight tracking-wide">
                   <span className="sr-only">Đám cưới của </span>
                   Hải Đăng <span aria-hidden="true">&amp;</span>
                   <span className="sr-only"> và </span> Bích Phượng
                 </h1>
                 <span
-                  className="h-[2px] w-20 md:w-25 bg-white block mb-2 md:mb-5 mx-auto"
+                  className="h-[2px] w-16 sm:w-20 md:w-24 bg-white/90 block mt-4 mb-3 sm:mt-5 sm:mb-4 md:mt-6 md:mb-5 mx-auto"
                   aria-hidden="true"
                 ></span>
                 <p
-                  className="nunito-regular text-white text-xl md:text-2xl"
+                  className="nunito-regular text-white/95 text-base sm:text-lg md:text-xl lg:text-2xl tracking-wide"
                   role="doc-subtitle"
                 >
                   <time dateTime="2025-12-27">
-                    Thứ bảy 27 Tháng 12 Năm 2025
+                    Thứ bảy, 27 Tháng 12 Năm 2025
                   </time>
                 </p>
               </div>
