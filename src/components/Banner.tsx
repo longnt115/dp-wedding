@@ -34,7 +34,6 @@ export default function Banner() {
                     transition={{ 
                       duration: 1, 
                       ease: "easeOut",
-                      delay: 0.3 
                     }}
                     className="inline-block"
                   >
@@ -46,7 +45,6 @@ export default function Banner() {
                     transition={{ 
                       duration: 0.7, 
                       ease: "easeOut",
-                      delay: 0.5
                     }}
                     className="inline-block mx-2 text-2xl md:text-unset"
                     aria-hidden="true"
@@ -59,17 +57,23 @@ export default function Banner() {
                     transition={{ 
                       duration: 1, 
                       ease: "easeOut",
-                      delay: 0.3 
                     }}
                     className="inline-block"
                   >
                     Bích Phượng
                   </motion.span>
                 </h1>
-                <span
+                <motion.span
+                  initial={{ scaleX: 0, opacity: 0 }}
+                  whileInView={{ scaleX: 1, opacity: 1 }}
+                  transition={{ 
+                    duration: 0.8, 
+                    ease: "easeOut",
+                  }}
+                  viewport={{ once: true }}
                   className="h-[2px] w-16 sm:w-20 md:w-24 bg-white/90 block mt-2 mb-2 sm:mb-3 md:mb-4 mx-auto"
                   aria-hidden="true"
-                ></span>
+                />
                 <p
                   className="nunito-regular text-white/95 text-base sm:text-lg md:text-xl lg:text-2xl tracking-wide"
                   role="doc-subtitle"
@@ -80,7 +84,6 @@ export default function Banner() {
                     transition={{ 
                       duration: 0.7, 
                       ease: "easeOut",
-                      delay: 0.5
                     }}
                     dateTime="2025-12-27"
                   >
