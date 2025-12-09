@@ -1,18 +1,8 @@
 "use client";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
 
 // URL: /invite/em-long
 
 export const Greeting = () => {
-  const [guestName, setGuestName] = useState("Quý Khách");
-  const params = useSearchParams();
-
-  useEffect(() => {
-    const guest = params.get("name") || "Quý Khách";
-    setGuestName(guest);
-  }, [params]);
-
   return (
     <section className="pt-[5em] bg-gradient-to-b from-black/[0.04] to-transparent">
       <div className="row-12 nunito-regular justify-center text-center mb-5 lg:mb-7">
@@ -37,9 +27,6 @@ export const Greeting = () => {
       <div className="row-12 dancing-regular justify-center text-center mb-10 lg:mb-0">
         <div className="col-12 text-3xl mb-5 lg:text-5xl">
           Trân Trọng Kính Mời
-        </div>
-        <div className="col-12 text-5xl lg:text-7xl dancing-thin underline decoration-dotted underline-offset-14 lg:underline-offset-16">
-          {guestName}
         </div>
       </div>
     </section>
