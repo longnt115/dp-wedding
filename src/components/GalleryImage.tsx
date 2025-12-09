@@ -145,7 +145,7 @@ export const GalleryImage = () => {
               Album Hình Cưới
             </h2>
             <span
-              className="h-[2px] w-20 md:w-25 bg-[#a10129] block mb-2 md:mb-5 mx-auto"
+              className="h-[2px] w-20 md:w-25 bg-[#840d0c] block mb-2 md:mb-5 mx-auto"
               aria-hidden="true"
             ></span>
             <p>
@@ -175,7 +175,7 @@ export const GalleryImage = () => {
               </div>
               {/* <div className="text-center">
                 <button
-                  className="mt-5 !rounded-full btn !border-1 !border-[#a10129] bg-white text-[#a10129] hover:!bg-[#a10129] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#a10129] focus:ring-offset-2"
+                  className="mt-5 !rounded-full btn !border-1 !border-[#840d0c] bg-white text-[#840d0c] hover:!bg-[#840d0c] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#840d0c] focus:ring-offset-2"
                   onClick={handleOpenGallery}
                   aria-label={`Xem tất cả ${displayGalleryImages.length} ảnh trong album`}
                 >

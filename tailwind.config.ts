@@ -14,7 +14,7 @@ const config: Config = {
       colors: {
         wedding: {
           // Primary colors - Đỏ đô truyền thống
-          primary: "#a10129",
+          primary: "#840d0c",
           "primary-light": "#c41d47",
           "primary-dark": "#7a0120",
 

@@ -24,8 +24,8 @@ export const Greeting = () => {
           27 <span> . </span> 12 <span> . </span> 2025
         </div>
       </div>
-      <div className="row-12 dancing-regular justify-center text-center mb-10 lg:mb-0">
-        <div className="col-12 text-3xl mb-5 lg:text-5xl">
+      <div className="row-12 dancing-regular justify-center text-center">
+        <div className="col-12 text-4xl lg:text-5xl">
           Trân Trọng Kính Mời
         </div>
       </div>

@@ -49,7 +49,7 @@ export const EventPlace = () => {
             <div className="text-center flex flex-col h-full justify-center items-center">
               <h2
                 id="venue-heading"
-                className="text-wedding-primary dancing-semibold text-[2.5rem] md:text-[3.75rem] mb-0 sm:mb-[10px] md:mb-5"
+                className="text-wedding-primary dancing-semibold text-[2.5rem] md:text-[3.75rem] mb-0"
               >
                 Địa Điểm Tổ Chức
               </h2>
