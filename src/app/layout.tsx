@@ -1,7 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { lazy, Suspense } from "react";
 import "./globals.scss";
+
+// Viewport configuration (Next.js 14+ recommends separate export)
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#840d0c",
+};
 
 // Nunito - Variable Font for body text (critical)
 const nunito = localFont({
@@ -49,10 +57,23 @@ const icomoon = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Thư Mời Dự Tiệc Cưới - Hải Đăng & Bích Phượng",
+  metadataBase: new URL("https://haidang-bichphuong.wedding"),
+  title: {
+    default: "Thư Mời Dự Tiệc Cưới - Hải Đăng & Bích Phượng",
+    template: "%s | Hải Đăng & Bích Phượng",
+  },
   description:
-    "Trân trọng kính mời bạn đến dự lễ thành hôn của Hải Đăng và Bích Phượng vào ngày 27 tháng 12 năm 2025.",
-  keywords: ["đám cưới", "wedding", "Hải Đăng", "Bích Phượng", "thiệp cưới"],
+    "Trân trọng kính mời bạn đến dự lễ thành hôn của Hải Đăng và Bích Phượng vào ngày 27 tháng 12 năm 2025 tại Trung Tâm Tiệc Cưới Promes Center, Hà Nội.",
+  keywords: [
+    "đám cưới",
+    "wedding",
+    "Hải Đăng",
+    "Bích Phượng",
+    "thiệp cưới",
+    "wedding invitation",
+    "lễ cưới",
+    "Promes Center",
+  ],
   authors: [{ name: "Hải Đăng & Bích Phượng" }],
   robots: {
     index: true,
@@ -61,15 +82,19 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Thư Mời Dự Tiệc Cưới - Hải Đăng & Bích Phượng",
     description:
-      "Trân trọng kính mời bạn đến dự lễ thành hôn của Hải Đăng và Bích Phượng vào ngày 27 tháng 12 năm 2025.",
+      "Trân trọng kính mời bạn đến dự lễ thành hôn của Hải Đăng và Bích Phượng vào ngày 27 tháng 12 năm 2025 tại Trung Tâm Tiệc Cưới Promes Center, Hà Nội.",
     type: "website",
     locale: "vi_VN",
+    siteName: "Thiệp Cưới Hải Đăng & Bích Phượng",
   },
   twitter: {
     card: "summary_large_image",
     title: "Thư Mời Dự Tiệc Cưới - Hải Đăng & Bích Phượng",
     description:
-      "Trân trọng kính mời bạn đến dự lễ thành hôn của Hải Đăng và Bích Phượng vào ngày 27 tháng 12 năm 2025.",
+      "Trân trọng kính mời bạn đến dự lễ thành hôn của Hải Đăng và Bích Phượng vào ngày 27 tháng 12 năm 2025 tại Trung Tâm Tiệc Cưới Promes Center, Hà Nội.",
+  },
+  other: {
+    "theme-color": "#840d0c",
   },
 };
 

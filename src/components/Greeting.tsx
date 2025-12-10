@@ -26,7 +26,7 @@ export const Greeting = () => {
       </div>
       <div className="row-12 dancing-regular justify-center text-center">
         <div className="col-12 text-4xl lg:text-5xl">
-          Trân Trọng Kính Mời
+          Trân Trọng Báo Tin Lễ Thành Hôn
         </div>
       </div>
     </section>

@@ -19,6 +19,7 @@ export const GroomBride = () => {
                 alt="Chú rể Hải Đăng"
                 width={320}
                 height={320}
+                sizes="(max-width: 640px) 150px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 320px"
                 className="w-full img-responsive"
               />
             </div>
@@ -38,6 +39,7 @@ export const GroomBride = () => {
                 alt="Cô dâu Bích Phượng"
                 width={320}
                 height={320}
+                sizes="(max-width: 640px) 150px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 320px"
                 className="w-full img-responsive"
               />
             </div>

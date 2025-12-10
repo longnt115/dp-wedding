@@ -1,6 +1,6 @@
 import Banner from "@/components/Banner";
-import { Loader } from "@/components/common/Loader";
 import { EventPlace } from "@/components/EventPlace";
+import { LoadingDoor } from "@/components/LoadingDoor";
 import GalleryLoader from "@/components/skeleton/GalleryLoader";
 import { WeddingInfor } from "@/components/WeddingInfor";
 import { lazy, Suspense } from "react";
@@ -33,7 +33,8 @@ const GroomBride = lazy(() =>
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Suspense fallback={<Loader />}>
+      <LoadingDoor />
+      <Suspense fallback={null}>
         <Banner />
         <Greeting />
         <GroomBride />

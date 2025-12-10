@@ -1,7 +1,32 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Transition } from "framer-motion";
 import Image from "next/image";
+
+// Animation variants để tránh re-create objects mỗi render
+const fadeInLeft = {
+  initial: { x: -100, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
+};
+
+const fadeInRight = {
+  initial: { x: 100, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
+};
+
+const fadeInUp = {
+  initial: { y: 50, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+};
+
+const scaleIn = {
+  initial: { scaleX: 0, opacity: 0 },
+  animate: { scaleX: 1, opacity: 1 },
+};
+
+// Transition configs - giảm delays để cải thiện perceived performance
+const transitionBase: Transition = { duration: 0.8, ease: "easeOut" };
+const ANIMATION_START_DELAY = 1.5; // Giảm từ 2s xuống 1.5s
 
 export default function Banner() {
   return (
@@ -10,7 +35,6 @@ export default function Banner() {
       className="fh5co-cover relative"
       role="banner"
       aria-label="Thiệp cưới Hải Đăng và Bích Phượng"
-      data-stellar-background-ratio="0.5"
     >
       <Image
         src="/assets/images/TVL_6408.webp"
@@ -22,56 +46,62 @@ export default function Banner() {
         sizes="100vw"
       />
       <div className="overlay" aria-hidden="true"></div>
-      <div className="container relative z-10">
+      <div className="container relative z-3">
         <div className="row">
           <div className="col-base-12 col-md-10 col-md-offset-1 text-center">
             <div className="display-t nunito-semibold">
-              <div className="display-tc" data-animate-effect="fadeIn">
-                <h1 className="banner-names mt-[22vh] xs:mt-[27vh] md:mt-[20vh] xl:mt-[50vh] text-5xl sm:text-6xl md:text-7xl lg:text-7xl leading-none tracking-wide">
+              <div className="display-tc">
+                {/* Thay styled-jsx bằng Tailwind: flex-col trên mobile, flex-row từ 321px */}
+                <h1 className="flex flex-col items-center min-[321px]:flex-row min-[321px]:flex-wrap min-[321px]:justify-center min-[321px]:leading-tight leading-none mt-[25vh] xs:mt-[30vh] md:mt-[33vh] xl:mt-[35vh] text-5xl sm:text-6xl md:text-7xl lg:text-7xl tracking-wide">
                   <motion.span
-                    initial={{ x: -200, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ 
-                      duration: 1, 
-                      ease: "easeOut",
+                    variants={fadeInLeft}
+                    initial="initial"
+                    animate="animate"
+                    transition={{
+                      ...transitionBase,
+                      delay: ANIMATION_START_DELAY,
                     }}
-                    className="inline-block"
+                    className="inline-block will-change-transform"
                   >
                     Hải Đăng
                   </motion.span>
                   <motion.span
-                    initial={{ y: 100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ 
-                      duration: 0.7, 
-                      ease: "easeOut",
+                    variants={fadeInUp}
+                    initial="initial"
+                    animate="animate"
+                    transition={{
+                      ...transitionBase,
+                      duration: 0.5,
+                      delay: ANIMATION_START_DELAY + 0.15,
                     }}
-                    className="inline-block mx-2 text-2xl md:text-unset"
+                    className="inline-block mx-2 text-2xl md:text-unset will-change-transform"
                     aria-hidden="true"
                   >
                     &amp;
                   </motion.span>
                   <motion.span
-                    initial={{ x: 200, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ 
-                      duration: 1, 
-                      ease: "easeOut",
+                    variants={fadeInRight}
+                    initial="initial"
+                    animate="animate"
+                    transition={{
+                      ...transitionBase,
+                      delay: ANIMATION_START_DELAY,
                     }}
-                    className="inline-block"
+                    className="inline-block will-change-transform"
                   >
                     Bích Phượng
                   </motion.span>
                 </h1>
                 <motion.span
-                  initial={{ scaleX: 0, opacity: 0 }}
-                  whileInView={{ scaleX: 1, opacity: 1 }}
-                  transition={{ 
-                    duration: 0.8, 
-                    ease: "easeOut",
+                  variants={scaleIn}
+                  initial="initial"
+                  animate="animate"
+                  transition={{
+                    ...transitionBase,
+                    duration: 0.6,
+                    delay: ANIMATION_START_DELAY + 0.3,
                   }}
-                  viewport={{ once: true }}
-                  className="h-[2px] w-16 sm:w-20 md:w-24 bg-white/90 block mt-2 mb-2 sm:mb-3 md:mb-4 mx-auto"
+                  className="h-[2px] w-16 sm:w-20 md:w-24 bg-white/90 block mt-2 mb-2 sm:mb-3 md:mb-4 mx-auto will-change-transform"
                   aria-hidden="true"
                 />
                 <p
@@ -79,13 +109,16 @@ export default function Banner() {
                   role="doc-subtitle"
                 >
                   <motion.time
-                    initial={{ y: 100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ 
-                      duration: 0.7, 
-                      ease: "easeOut",
+                    variants={fadeInUp}
+                    initial="initial"
+                    animate="animate"
+                    transition={{
+                      ...transitionBase,
+                      duration: 0.5,
+                      delay: ANIMATION_START_DELAY + 0.5,
                     }}
                     dateTime="2025-12-27"
+                    className="inline-block will-change-transform"
                   >
                     Thứ bảy, 27 Tháng 12 Năm 2025
                   </motion.time>
@@ -95,25 +128,6 @@ export default function Banner() {
           </div>
         </div>
       </div>
-      
-      <style jsx>{`
-        .banner-names {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          line-height: 1 !important;
-        }
-        
-        @media (min-width: 321px) {
-          .banner-names {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0;
-            line-height: 1.25;
-          }
-        }
-      `}</style>
     </header>
   );
 }

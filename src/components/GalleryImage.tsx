@@ -77,7 +77,7 @@ const GalleryItem = memo(
           alt={`${image.key} của Hải Đăng và Bích Phượng`}
           className="object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
           fill
-          sizes="(max-width: 768px) 45vw, (max-width: 1200px) 30vw, 30vw"
+          sizes="(max-width: 360px) 40vw, (max-width: 768px) 45vw, (max-width: 1200px) 30vw, 30vw"
           loading={idx < 3 ? "eager" : "lazy"}
         />
       </div>
@@ -93,7 +93,7 @@ export const GalleryImage = () => {
   >([]);
   // Sử dụng state thay vì import trực tiếp để check một lần khi mount
   const [isMobileDevice, setIsMobileDevice] = useState(false);
-  
+
   useEffect(() => {
     const userAgent = navigator.userAgent.toLowerCase();
     setIsMobileDevice(checkMobile(userAgent));
