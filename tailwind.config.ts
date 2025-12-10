@@ -9,27 +9,28 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        'xxs': '321px', // For screens larger than 320px
+        xxs: "321px", // For screens larger than 320px
       },
       colors: {
         wedding: {
           // Primary colors - Đỏ đô truyền thống
-          primary: "#840d0c",
-          "primary-light": "#c41d47",
-          "primary-dark": "#7a0120",
+          primary: "var(--color-wedding-primary, #840d0c)",
+          "primary-light": "var(--color-wedding-primary-light, #c41d47)",
+          "primary-dark": "var(--color-wedding-primary-dark, #7a0120)",
+          accent: "var(--color-wedding-accent, #a10129)",
 
           // Neutral colors
-          dark: "#3a3a3a",
-          light: "#f5f5f5",
+          dark: "var(--color-wedding-dark, #3a3a3a)",
+          light: "var(--color-wedding-light, #f5f5f5)",
           white: "#ffffff",
 
           // Gold accent colors
-          gold: "#d4af37",
-          goldLight: "#c9a961",
-          goldDark: "#8b7d3f",
+          gold: "var(--color-wedding-gold, #d4af37)",
+          "gold-light": "var(--color-wedding-gold-light, #c9a961)",
+          "gold-dark": "#8b7d3f",
 
           // Gray scale
-          gray: "#4a4a4a",
+          gray: "var(--color-wedding-gray, #4a4a4a)",
           gray100: "#f7f7f7",
           gray600: "#666666",
           gray900: "#1a1a1a",

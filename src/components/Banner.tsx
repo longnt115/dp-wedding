@@ -101,7 +101,7 @@ export default function Banner() {
                     duration: 0.6,
                     delay: ANIMATION_START_DELAY + 0.3,
                   }}
-                  className="h-[2px] w-16 sm:w-20 md:w-24 bg-white/90 block mt-2 mb-2 sm:mb-3 md:mb-4 mx-auto will-change-transform"
+                  className="h-[2px] w-16 md:w-24 bg-white/90 block mt-2 mb-2 md:mb-4 mx-auto will-change-transform"
                   aria-hidden="true"
                 />
                 <p

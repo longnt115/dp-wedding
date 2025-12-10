@@ -96,11 +96,9 @@ export const GalleryImage = () => {
 
   useEffect(() => {
     const userAgent = navigator.userAgent.toLowerCase();
-    setIsMobileDevice(checkMobile(userAgent));
-    const displayImages = shuffle(galleryImages).slice(
-      0,
-      isMobileDevice ? 11 : 12
-    );
+    const isMobile = checkMobile(userAgent);
+    setIsMobileDevice(isMobile);
+    const displayImages = shuffle(galleryImages).slice(0, isMobile ? 11 : 12);
     setDisplayGalleryImages(displayImages);
   }, []);
 
@@ -131,7 +129,7 @@ export const GalleryImage = () => {
   return (
     <section
       id="fh5co-gallery"
-      className="fh5co-section-gray !pb-[2.5rem]"
+      className="fh5co-section-gray !pb-10"
       aria-labelledby="gallery-heading"
     >
       <div className="container">
@@ -140,12 +138,12 @@ export const GalleryImage = () => {
             <span>Kỷ Niệm Chúng Mình</span>
             <h2
               id="gallery-heading"
-              className="text-wedding-bride-red !mb-0 sm:mb-[10px]"
+              className="text-wedding-primary !mb-0 sm:mb-2"
             >
               Album Hình Cưới
             </h2>
             <span
-              className="h-[2px] w-20 md:w-25 bg-[#840d0c] block mb-2 md:mb-5 mx-auto"
+              className="h-[2px] w-16 md:w-24 bg-wedding-primary block mb-2 md:mb-4 mx-auto"
               aria-hidden="true"
             ></span>
             <p>
@@ -175,7 +173,7 @@ export const GalleryImage = () => {
               </div>
               {/* <div className="text-center">
                 <button
-                  className="mt-5 !rounded-full btn !border-1 !border-[#840d0c] bg-white text-[#840d0c] hover:!bg-[#840d0c] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#840d0c] focus:ring-offset-2"
+                  className="mt-5 !rounded-full btn !border-1 !border-wedding-primary bg-white text-wedding-primary hover:!bg-wedding-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-wedding-primary focus:ring-offset-2"
                   onClick={handleOpenGallery}
                   aria-label={`Xem tất cả ${displayGalleryImages.length} ảnh trong album`}
                 >

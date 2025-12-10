@@ -31,7 +31,7 @@ export function LoadingDoor() {
               duration: 2,
               ease: [0.645, 0.045, 0.355, 1], // easeInOutCubic
             }}
-            className="bg-[#a10129] w-[50vw] h-[100vh] relative overflow-visible z-10 will-change-transform"
+            className="bg-wedding-accent w-[50vw] h-[100vh] relative overflow-visible z-10 will-change-transform"
           >
             <Image
               src="/assets/images/hy_text.webp"
@@ -59,7 +59,7 @@ export function LoadingDoor() {
               duration: 2,
               ease: [0.645, 0.045, 0.355, 1], // easeInOutCubic
             }}
-            className="bg-[#a10129] w-[50vw] h-[100vh] will-change-transform"
+            className="bg-wedding-accent w-[50vw] h-[100vh] will-change-transform"
           />
         </section>
       )}

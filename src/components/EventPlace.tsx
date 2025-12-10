@@ -54,11 +54,11 @@ export const EventPlace = () => {
                 Địa Điểm Tổ Chức
               </h2>
               <span
-                className="h-[2px] w-20 md:w-25 bg-wedding-primary block mb-2 md:mb-5 mx-auto sm:mb-[10px]"
+                className="h-[2px] w-16 md:w-24 bg-wedding-primary block mb-2 md:mb-4 mx-auto"
                 aria-hidden="true"
               ></span>
               <address className="not-italic mt-2 md:mt-0">
-                <h3 className="text-[1.25rem] mb-5 leading-none">
+                <h3 className="text-[1.25rem] mb-4 leading-none">
                   Trung Tâm Tiệc Cưới &amp; Sự Kiện Promes Center <br />
                   <span className="text-[1rem] dancing-thin text-gray-600">
                     122 - 124, Đ. Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội
@@ -67,7 +67,7 @@ export const EventPlace = () => {
                 </h3>
               </address>
               <div
-                className="w-full max-w-[550px] flex-grow px-4 pt-6"
+                className="w-full max-w-[550px] flex-grow px-4 pt-4"
                 ref={mapContainerRef}
               >
                 <div className="w-full h-full aspect-video">

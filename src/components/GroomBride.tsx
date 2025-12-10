@@ -8,7 +8,7 @@ export const GroomBride = () => {
       className="!mt-0"
     >
       <div className="container">
-        <div className="couple-wrap mb-[3em] md:mb-[6em]">
+        <div className="couple-wrap mb-12 md:mb-24">
           <article
             className="couple-half relative"
             aria-label="Thông tin chú rể"
@@ -48,12 +48,12 @@ export const GroomBride = () => {
         <div className="row justify-center flex flex-col items-center">
           <h2
             id="venue-heading"
-            className="nunito-semibold text-4xl md:text-5xl col-base-12 mb-5 text-center"
+            className="nunito-semibold text-4xl md:text-5xl col-base-12 mb-4 text-center"
           >
             Nhà Có Hỷ
           </h2>
           <span
-            className="h-[2px] w-20 md:w-25 bg-black block mb-2 md:mb-5 mx-auto"
+            className="h-[2px] w-16 md:w-24 bg-wedding-primary block mb-2 md:mb-4 mx-auto"
             aria-hidden="true"
           ></span>
           <h3 className="dancing-semibold flex flex-row items-center col-base-12 w-full">

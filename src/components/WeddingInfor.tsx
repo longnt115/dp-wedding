@@ -22,12 +22,12 @@ export const WeddingInfor = () => {
       <div className="overlay" aria-hidden="true"></div>
       <div className="container relative z-1">
         <div className="row">
-          <div className="col-xs-12 col-md-8 col-md-offset-2 text-center fh5co-heading mb-[3rem] sm:mb-[5rem]">
+          <div className="col-xs-12 col-md-8 col-md-offset-2 text-center fh5co-heading mb-12 sm:mb-20">
             <h2 id="wedding-ceremony-heading" className="!mb-0">
               Lễ Thành Hôn
             </h2>
             <span
-              className="h-[2px] w-20 md:w-25 bg-white block mx-auto"
+              className="h-[2px] w-16 md:w-24 bg-white block mx-auto"
               aria-hidden="true"
             ></span>
           </div>
