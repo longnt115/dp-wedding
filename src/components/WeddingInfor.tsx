@@ -14,8 +14,7 @@ export const WeddingInfor = () => {
         src="/assets/images/TVL_7046.webp"
         alt=""
         fill
-        sizes="100vw"
-        className="object-cover object-[center] sm:object-[bottom_0_right_-5.75rem] md:object-[bottom_right] -z-10"
+        className="object-cover object-[bottom_0_right_-5.75rem] md:object-[bottom_right] -z-10"
         priority={false}
         aria-hidden="true"
       />
