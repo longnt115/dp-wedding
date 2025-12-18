@@ -60,7 +60,7 @@ export const GroomBride = () => {
             <div className="couple-half flex flex-col justify-center items-center">
               <div className="groom !border-0">
                 <span className="nunito-regular text-lg sm:text-xl md:text-3xl lg:text-4xl">
-                  Chủ Rể
+                  Chú Rể
                 </span>
                 <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-wedding-primary">
                   Hải Đăng
